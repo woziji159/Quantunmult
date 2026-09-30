@@ -1,0 +1,710 @@
+{
+  "snapshot": "2026-09-28",
+  "sources": [
+    {
+      "id": "Advertising",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Advertising/Advertising.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Advertising/Advertising.list",
+      "bytes": 12291170,
+      "rule_count": 286873,
+      "sha256": "1d9123df27789ec5b984141dd78222c260fbea8c41ab0816c83069904ee93412",
+      "fetched_at": "2026-09-28T07:23:56.427596+00:00",
+      "upstream_updated": "# UPDATED: 2026-09-28 04:39:04"
+    },
+    {
+      "id": "Apple",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Apple/Apple.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Apple/Apple.list",
+      "bytes": 67283,
+      "rule_count": 1881,
+      "sha256": "65b67d465a7b23378b34a37ae8883af35a846ab49b5cf68466be3b3b688f986e",
+      "fetched_at": "2026-09-28T07:23:31.858143+00:00",
+      "upstream_updated": "# UPDATED: 2026-09-28 04:41:31"
+    },
+    {
+      "id": "AppleMail",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/AppleMail/AppleMail.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/AppleMail/AppleMail.list",
+      "bytes": 231,
+      "rule_count": 2,
+      "sha256": "0f0f270817dc95160f75a95d0d70b4db2650426bf59d22a73273aa2241a99661",
+      "fetched_at": "2026-09-28T07:23:31.918483+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:15:11"
+    },
+    {
+      "id": "OpenAI",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/OpenAI/OpenAI.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/OpenAI/OpenAI.list",
+      "bytes": 1495,
+      "rule_count": 35,
+      "sha256": "6ec16f5da986a15c62e80192f5b445dcdaf88607987923120761c1388eeb243d",
+      "fetched_at": "2026-09-28T07:23:30.519732+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:20:00"
+    },
+    {
+      "id": "BardAI",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/BardAI/BardAI.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/BardAI/BardAI.list",
+      "bytes": 554,
+      "rule_count": 10,
+      "sha256": "ba6784d7375e758bdbadb15a766df3745f31f5b8348dc647a5ccacdcbb05fa0f",
+      "fetched_at": "2026-09-28T07:23:32.783666+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:20:02"
+    },
+    {
+      "id": "Gemini",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Gemini/Gemini.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Gemini/Gemini.list",
+      "bytes": 664,
+      "rule_count": 13,
+      "sha256": "9e488fd027a55ec5bfeeeda1ab4a9022364c1d47dfd140293e02835d3303980f",
+      "fetched_at": "2026-09-28T07:23:36.448061+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:20:02"
+    },
+    {
+      "id": "Claude",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Claude/Claude.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Claude/Claude.list",
+      "bytes": 255,
+      "rule_count": 3,
+      "sha256": "bcf41ba79464a16d8305cf1c6f18c69d023ccd33ea1b84834daaa47cc0d5dfea",
+      "fetched_at": "2026-09-28T07:23:34.713849+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:20:01"
+    },
+    {
+      "id": "TikTok",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/TikTok/TikTok.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/TikTok/TikTok.list",
+      "bytes": 1256,
+      "rule_count": 32,
+      "sha256": "d1e594680d94bec9575ebc584d03c224c8ac5b74daba1fa8f87b44f48b7724bb",
+      "fetched_at": "2026-09-28T07:23:36.690132+00:00",
+      "upstream_updated": "# UPDATED: 2025-08-10 02:08:00"
+    },
+    {
+      "id": "Direct",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Direct/Direct.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Direct/Direct.list",
+      "bytes": 7646,
+      "rule_count": 232,
+      "sha256": "5ba475db11bd85c7f92699760c15d935d6011616143c99fff54827783772dc7a",
+      "fetched_at": "2026-09-28T07:23:38.934452+00:00",
+      "upstream_updated": "# UPDATED: 2025-08-12 02:08:14"
+    },
+    {
+      "id": "WeChat",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/WeChat/WeChat.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/WeChat/WeChat.list",
+      "bytes": 1556,
+      "rule_count": 43,
+      "sha256": "f2b1097292162858845d3b4f99058f047e0715bef4a0e6202b40a10af5c38e2c",
+      "fetched_at": "2026-09-28T07:23:40.349567+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:18:25"
+    },
+    {
+      "id": "Privacy",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Privacy/Privacy.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Privacy/Privacy.list",
+      "bytes": 1684697,
+      "rule_count": 39936,
+      "sha256": "2791fc2b3c4cf242caaa3e27f0393ea908aa82baa0b54b62c0ed2f4ec2d68198",
+      "fetched_at": "2026-09-28T07:23:48.181661+00:00",
+      "upstream_updated": "# UPDATED: 2025-12-08 02:06:16"
+    },
+    {
+      "id": "Hijacking",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Hijacking/Hijacking.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Hijacking/Hijacking.list",
+      "bytes": 8176,
+      "rule_count": 228,
+      "sha256": "f876f136c51c3d646607eca74239a611410b796d5903f6bf36f3b211ff24cdb8",
+      "fetched_at": "2026-09-28T07:23:43.100143+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:15:02"
+    },
+    {
+      "id": "Google",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Google/Google.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Google/Google.list",
+      "bytes": 23684,
+      "rule_count": 711,
+      "sha256": "eb56706413fab41ded77194ae73f690af583bd56ad7d470273e026fa5ccb7b93",
+      "fetched_at": "2026-09-28T07:23:44.366300+00:00",
+      "upstream_updated": "# UPDATED: 2026-05-12 02:38:11"
+    },
+    {
+      "id": "Cryptocurrency",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Cryptocurrency/Cryptocurrency.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Cryptocurrency/Cryptocurrency.list",
+      "bytes": 1829,
+      "rule_count": 43,
+      "sha256": "2d6969b98acafb4eae3d43e8ed6ecfae12b6dfbada84ae113795d936807e5805",
+      "fetched_at": "2026-09-28T07:23:45.814781+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:17:51"
+    },
+    {
+      "id": "Telegram",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Telegram/Telegram.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Telegram/Telegram.list",
+      "bytes": 1494,
+      "rule_count": 40,
+      "sha256": "986f8e7d587ce42c3bb472e6a2e9cffd42a413240d32c02cc363c4d6367141fe",
+      "fetched_at": "2026-09-28T07:23:46.851862+00:00",
+      "upstream_updated": "# UPDATED: 2025-09-10 02:08:26"
+    },
+    {
+      "id": "Netflix",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Netflix/Netflix.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Netflix/Netflix.list",
+      "bytes": 37297,
+      "rule_count": 1158,
+      "sha256": "eb95ba340fc9b3013e6b66a64270d20e4142b0f9b8cde1bac060725742331ec7",
+      "fetched_at": "2026-09-28T07:23:49.664783+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:16:54"
+    },
+    {
+      "id": "GlobalMedia",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/GlobalMedia/GlobalMedia.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/GlobalMedia/GlobalMedia.list",
+      "bytes": 88663,
+      "rule_count": 2341,
+      "sha256": "7f798e1a94bb278f7ea19f57a368217bfe0da861c4cbf9e26582b9856390b80d",
+      "fetched_at": "2026-09-28T07:23:49.768344+00:00",
+      "upstream_updated": "# UPDATED: 2026-09-28 04:43:02"
+    },
+    {
+      "id": "Global",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Global/Global.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Global/Global.list",
+      "bytes": 1210108,
+      "rule_count": 35784,
+      "sha256": "ca78e02330d2419551b676281ea535d9acaea702f6822d5ba5442759015f6619",
+      "fetched_at": "2026-09-28T07:23:54.650627+00:00",
+      "upstream_updated": "# UPDATED: 2026-09-28 04:43:01"
+    },
+    {
+      "id": "China",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/China/China.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/China/China.list",
+      "bytes": 115682,
+      "rule_count": 3753,
+      "sha256": "d1db36ac45b3615ee989cc2294e49559cf7d2c7e9826b00d716bc2cb436c09e1",
+      "fetched_at": "2026-09-28T07:23:53.064379+00:00",
+      "upstream_updated": "# UPDATED: 2026-06-22 02:36:19"
+    },
+    {
+      "id": "ChinaIPs",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/ChinaIPs/ChinaIPs.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/ChinaIPs/ChinaIPs.list",
+      "bytes": 652838,
+      "rule_count": 19223,
+      "sha256": "774f2ab0020833f797febebbd6d4acc1d504cd8cfc11ca28939e8815ea7cda01",
+      "fetched_at": "2026-09-28T07:23:54.758854+00:00",
+      "upstream_updated": "# UPDATED: 2026-09-28 04:43:26"
+    },
+    {
+      "id": "BlockiOSUpdate",
+      "repository": "ddgksf2013/Filter",
+      "branch": "master",
+      "path": "BlockiOSUpdate.list",
+      "commit": "d52c1103c53949fd6db9b43989d7975ff55c7019",
+      "commit_date": "2026-09-17T05:52:34Z",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Filter/d52c1103c53949fd6db9b43989d7975ff55c7019/BlockiOSUpdate.list",
+      "bytes": 98,
+      "rule_count": 4,
+      "sha256": "bcd019f1e89ccb4d2cc4645d1bd367620ce2469023270d96045004b0f7c257ec",
+      "fetched_at": "2026-09-28T07:23:56.412058+00:00",
+      "upstream_updated": null
+    },
+    {
+      "id": "Twitter",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/Twitter/Twitter.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Twitter/Twitter.list",
+      "bytes": 1256,
+      "rule_count": 33,
+      "sha256": "71cc825be928852e43158d45075e036fad558d0d212c0703c192ed5651bbfcb4",
+      "fetched_at": "2026-09-28T07:25:51.616304+00:00",
+      "upstream_updated": "# UPDATED: 2025-09-28 02:08:26"
+    },
+    {
+      "id": "GitHub",
+      "repository": "blackmatrix7/ios_rule_script",
+      "branch": "master",
+      "path": "rule/QuantumultX/GitHub/GitHub.list",
+      "commit": "5c22b5056f6288c27935489f74f8681fadbdba87",
+      "commit_date": "2026-09-27T20:46:57Z",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/GitHub/GitHub.list",
+      "bytes": 1268,
+      "rule_count": 31,
+      "sha256": "413f664aa29692e83879422ee6d35ced46dd135ebd85f67afaf554ab14391f77",
+      "fetched_at": "2026-09-28T07:35:29.097856+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-12 02:06:19"
+    },
+    {
+      "id": "Copilot",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Copilot/Copilot.list",
+      "rule_count": 51,
+      "sha256": "b6bd07a9aaa109d44915b23b19d1d05948cc137dc7e2a5c3240d9a81c6e6b3a4",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:20:02"
+    },
+    {
+      "id": "Grok",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/xai",
+      "format": "v2fly",
+      "rule_count": 4,
+      "sha256": "1e15c6018174f58f6a2f3710c84566909eee45a8092247280d244cf8ea7cd928",
+      "fetched_at": "2026-09-28T12:20:50.479048+00:00",
+      "upstream_updated": null
+    },
+    {
+      "id": "Perplexity",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/perplexity",
+      "format": "v2fly",
+      "rule_count": 5,
+      "sha256": "570581bad658566cb493207c14ebb55110750071071e089b4c40054b00af3db0",
+      "fetched_at": "2026-09-28T12:20:53.208675+00:00",
+      "upstream_updated": null
+    },
+    {
+      "id": "Cursor",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/cursor",
+      "format": "v2fly",
+      "rule_count": 4,
+      "sha256": "963a78363ff86e87ae10859baa5f2dc7e3184efce13ac6e158bb2e698228bf5d",
+      "fetched_at": "2026-09-28T12:20:48.374536+00:00",
+      "upstream_updated": null
+    },
+    {
+      "id": "GitHubCopilot",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/github-copilot",
+      "format": "v2fly",
+      "rule_count": 6,
+      "sha256": "069a626c3c23ee63f82e26ce11a83477d8dbe9e27f81968e4b073acf496260f3",
+      "fetched_at": "2026-09-28T12:20:47.503099+00:00",
+      "upstream_updated": null
+    },
+    {
+      "id": "Steam",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Steam/Steam.list",
+      "rule_count": 62,
+      "sha256": "a69fc21f4e9203ebb7888c70b4ba0210233bbcf41356ba9df78d1c8e026b28c7",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:15:08"
+    },
+    {
+      "id": "Game",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Game/Game.list",
+      "format": "qx",
+      "rule_count": 597,
+      "sha256": "e628e1718293eae67ad9b4896e62d1341ca76d621b6d1d5cf5678f73fe9d44cf",
+      "fetched_at": "2026-09-28T12:20:47.010793+00:00",
+      "upstream_updated": "# UPDATED: 2026-09-28 04:41:28"
+    },
+    {
+      "id": "GameDownload",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Game/GameDownload/GameDownload.list",
+      "format": "qx",
+      "rule_count": 39,
+      "sha256": "0706e08a00d0194fdc715954e910eea605249617399e254dd988935968cb4b40",
+      "fetched_at": "2026-09-28T12:20:48.624271+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:18:53"
+    },
+    {
+      "id": "Download",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Download/Download.list",
+      "format": "qx",
+      "rule_count": 6,
+      "sha256": "1cce33c6d3137bc2f325b3ac0b3489d5738c2c76fc8f371345f606d51e804f33",
+      "fetched_at": "2026-09-28T12:20:45.516177+00:00",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:17:01"
+    },
+    {
+      "id": "PrivateTracker",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/PrivateTracker/PrivateTracker.list",
+      "rule_count": 248,
+      "sha256": "431d1c2c061cd5110f6b335bc8bdfef8bf97188a5b2d9a721484b6d4fd1d72ad",
+      "upstream_updated": "# UPDATED: 2026-06-04 03:21:05"
+    },
+    {
+      "id": "Speedtest",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Speedtest/Speedtest.list",
+      "rule_count": 10,
+      "sha256": "0df396cb9d406b4989309a536154cd33b32f252c2f582395499abc1f2fb49376",
+      "upstream_updated": "# UPDATED: 2026-09-28 04:43:02"
+    },
+    {
+      "id": "Emby",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Emby/Emby.list",
+      "rule_count": 51,
+      "sha256": "20e785fa1bc4d4687c72a881f6e5217abdda3459c1eb190b89d965d8441af398",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:18:49"
+    },
+    {
+      "id": "OneDrive",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/OneDrive/OneDrive.list",
+      "rule_count": 17,
+      "sha256": "ff3c4a9b4bf9ff4a5095b653e8c9af69a90c4074b3d136a8a82f8cfbb701f676",
+      "upstream_updated": "# UPDATED: 2026-01-26 02:06:39"
+    },
+    {
+      "id": "Microsoft",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Microsoft/Microsoft.list",
+      "rule_count": 712,
+      "sha256": "7de40c9424a4a1ab793a38f58dbf64c25ef68f9e812618abf3751a853561c800",
+      "upstream_updated": "# UPDATED: 2025-12-08 02:06:20"
+    },
+    {
+      "id": "Scholar",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Scholar/Scholar.list",
+      "rule_count": 231,
+      "sha256": "f0f995a92116b33f648c2b7d4fc8aba5e0e27bab527ea37a415d8db608916473",
+      "upstream_updated": "# UPDATED: 2026-05-28 02:48:40"
+    },
+    {
+      "id": "AppleIntelligence",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/apple-intelligence",
+      "format": "v2fly",
+      "rule_count": 5,
+      "sha256": "3842f2911d3c4ca2e931a1bab6e1b8ce8d574b874c997656f6cc0de210393666",
+      "fetched_at": "2026-09-28T12:20:51.636538+00:00",
+      "upstream_updated": null
+    },
+    {
+      "id": "BlockHttpDNS",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/BlockHttpDNS/BlockHttpDNS.list",
+      "rule_count": 63,
+      "sha256": "d0c4f2059ce08e0a5b52cc42cb438d522243cd0d06d1d0d48cd6ae12fd0a4898",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:20:00"
+    },
+    {
+      "id": "Mail",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Mail/Mail.list",
+      "rule_count": 12,
+      "sha256": "d5ccc72a37c77177c8b777ad7942b104fc9b934833db147e4f23bbaca39acd4f",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:16:55"
+    },
+    {
+      "id": "GoogleDrive",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/GoogleDrive/GoogleDrive.list",
+      "rule_count": 8,
+      "sha256": "4969e8ba55a0d03ba5dd13d8b626a28b73823c1e57991187e5c05a792b7f9144",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:15:10"
+    },
+    {
+      "id": "PayPal",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/PayPal/PayPal.list",
+      "rule_count": 248,
+      "sha256": "fb24ac2d5774d16dfd2a43475846a673158fa9ed273b93bf1225726a378fcff8",
+      "upstream_updated": "# UPDATED: 2025-06-08 02:07:37"
+    },
+    {
+      "id": "Discord",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Discord/Discord.list",
+      "rule_count": 29,
+      "sha256": "8b4ea92aa617fc9697f45a1cd276b47d3b96bd07019584aebcde5f6aae0fddf2",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:16:55"
+    },
+    {
+      "id": "Reddit",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Reddit/Reddit.list",
+      "rule_count": 8,
+      "sha256": "628f0a3341498af9717559996d611c78c2e7abfccd5eb5b2e84debb1f23b8c8e",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:17:47"
+    },
+    {
+      "id": "Twitch",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/5c22b5056f6288c27935489f74f8681fadbdba87/rule/QuantumultX/Twitch/Twitch.list",
+      "rule_count": 21,
+      "sha256": "1f79f5ec91170a7ab00bfbe3fb13a44be7e693de10b0ac9810d2bd850867b1b6",
+      "upstream_updated": "# UPDATED: 2025-06-06 09:17:48"
+    }
+  ],
+  "rules": 358653,
+  "chunks": [
+    {
+      "file": "qx-rules-01.list",
+      "rules": 28272,
+      "bytes": 950058,
+      "sha256": "fcbd40055cc2145613b8df84a361840010960a6e5fc4086fdb949f48f5204e5e"
+    },
+    {
+      "file": "qx-rules-02.list",
+      "rules": 23923,
+      "bytes": 950049,
+      "sha256": "824908a46198a9b2ef60d3374556556e5a4e30ed7f6f452cbafbd3c099b572c5"
+    },
+    {
+      "file": "qx-rules-03.list",
+      "rules": 22460,
+      "bytes": 950045,
+      "sha256": "e214ab9116be166ee22c3fcc92a5bbb5c00060da6fb86e036740f340d426b542"
+    },
+    {
+      "file": "qx-rules-04.list",
+      "rules": 23392,
+      "bytes": 950031,
+      "sha256": "cc700b6e095386d9d5122745e4d00bd20f44e2e3cf50c9691be4a4a6a964bbcf"
+    },
+    {
+      "file": "qx-rules-05.list",
+      "rules": 23908,
+      "bytes": 950028,
+      "sha256": "dbdf8de28aac5440ae2156747d0acf061da1c57ec44590a4c9759373202f1176"
+    },
+    {
+      "file": "qx-rules-06.list",
+      "rules": 23176,
+      "bytes": 950047,
+      "sha256": "02ba6aa632cdfd32bcb0b91306b336ef70e193233612af8927480de4cd0bce4d"
+    },
+    {
+      "file": "qx-rules-07.list",
+      "rules": 23930,
+      "bytes": 950014,
+      "sha256": "237524c68ed7abbe7b4f02256518398d81897851f3647d4e04b7d644db1bb95a"
+    },
+    {
+      "file": "qx-rules-08.list",
+      "rules": 23045,
+      "bytes": 950047,
+      "sha256": "ff079648a12761b82b5ca7711d740987bace9d47f89aa99b1e2e6374df4c1255"
+    },
+    {
+      "file": "qx-rules-09.list",
+      "rules": 22831,
+      "bytes": 950030,
+      "sha256": "d74820de0296e7f30d7ba021edb2195f2f1de8f174a33f192fab14874f404ec6"
+    },
+    {
+      "file": "qx-rules-10.list",
+      "rules": 24118,
+      "bytes": 950059,
+      "sha256": "5cbb2d1901c828972a5d6c0d5572beb7a3e324a1b1ba6271914d067023eac43b"
+    },
+    {
+      "file": "qx-rules-11.list",
+      "rules": 24730,
+      "bytes": 950009,
+      "sha256": "b8015798fb599e93883c28cd5e6aba36362abe2dda54ede1d74b829cc6dcc27e"
+    },
+    {
+      "file": "qx-rules-12.list",
+      "rules": 22231,
+      "bytes": 950034,
+      "sha256": "a59c7d66568e1235c033ccd6062e8a8a8a4e918cca12a0272125f2ba3db48f23"
+    },
+    {
+      "file": "qx-cn-rules-13.list",
+      "rules": 22806,
+      "bytes": 969463,
+      "sha256": "b3783141a5334cc9fb2ba68ef49d734102f48089ba4d62d216c9f4ec8c8a2692"
+    },
+    {
+      "file": "qx-cn-rules-14.list",
+      "rules": 22759,
+      "bytes": 950108,
+      "sha256": "2e3cac0060489c43384b86b2f66dcde6b985e7200aab776807051d92b0c7e050"
+    },
+    {
+      "file": "qx-cn-rules-15.list",
+      "rules": 26937,
+      "bytes": 939752,
+      "sha256": "46fb46b30accd4d15d6b1b94967ebe14adb4467fe567d44fbd523688133f0d97"
+    }
+  ],
+  "documented_adjustments": [
+    {
+      "source": "AppleIntelligence",
+      "note": "Use 4 official endpoints; preserve gspe1-ssl.ls.apple.com and Private Relay mapping as ordinary Apple DIRECT."
+    }
+  ],
+  "policy_names": {
+    "Advertising": "广告拦截",
+    "Apple": "苹果服务",
+    "Shawn": "iOS系统更新",
+    "Mail": "国外邮箱",
+    "AppleIntelligence": "苹果智能",
+    "GitHubCopilot": "GitHub",
+    "Grok": "Grok人工智能",
+    "Perplexity": "Perplexity搜索",
+    "Cursor": "Cursor编程",
+    "GameDownload": "游戏下载",
+    "Download": "文件下载",
+    "PrivateTracker": "PT下载",
+    "Speedtest": "网络测速",
+    "Emby": "Emby影院",
+    "OneDrive": "微软网盘",
+    "GoogleDrive": "谷歌网盘",
+    "PayPal": "贝宝支付",
+    "Discord": "Discord社群",
+    "Reddit": "Reddit论坛",
+    "Twitch": "Twitch直播",
+    "Scholar": "学术论文",
+    "Steam": "Steam游戏",
+    "Game": "游戏平台",
+    "Copilot": "微软AI",
+    "Microsoft": "微软服务",
+    "BlockHttpDNS": "HTTPDNS控制",
+    "Netfilx": "奈飞视频",
+    "OpenAI": "人工智能",
+    "Google": "谷歌服务",
+    "Telegram": "电报",
+    "GitHub": "GitHub",
+    "X": "X推特",
+    "TikTok": "TikTok国际版"
+  },
+  "rewrite_mirrors": [
+    {
+      "original_url": "https://yfamilys.com/rewrite/adultraplus.conf",
+      "file": "qx-rewrite-adultraplus.conf",
+      "bytes": 273318,
+      "sha256": "5afee401e84d5eb3b3efb960cd70461282d9dd77423698d6dca242e19b6fc11f",
+      "source_sha256": "5afee401e84d5eb3b3efb960cd70461282d9dd77423698d6dca242e19b6fc11f",
+      "adjustments": [],
+      "fetched": "2026-09-29",
+      "native_qx_parser_disabled": true,
+      "mirror_url": "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-rewrite-adultraplus.conf"
+    },
+    {
+      "original_url": "https://yfamilys.com/rewrite/AdBlock.conf",
+      "file": "qx-rewrite-AdBlock.conf",
+      "bytes": 29174,
+      "sha256": "a33416c2d24aa74ac182649606bde9e77dd560050d5e2dfc3aa2e4868f3d8c84",
+      "source_sha256": "a33416c2d24aa74ac182649606bde9e77dd560050d5e2dfc3aa2e4868f3d8c84",
+      "adjustments": [],
+      "fetched": "2026-09-29",
+      "native_qx_parser_disabled": false,
+      "mirror_url": "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-rewrite-AdBlock.conf"
+    },
+    {
+      "original_url": "https://yfamilys.com/rewrite/youtube.conf",
+      "file": "qx-rewrite-youtube.conf",
+      "bytes": 980,
+      "sha256": "9ea7d1d510c2669d63874304d1cdde6358b9116263bb6a83e6007061d29bb0e2",
+      "source_sha256": "9ea7d1d510c2669d63874304d1cdde6358b9116263bb6a83e6007061d29bb0e2",
+      "adjustments": [],
+      "fetched": "2026-09-29",
+      "native_qx_parser_disabled": false,
+      "mirror_url": "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-rewrite-youtube.conf"
+    },
+    {
+      "original_url": "https://yfamilys.com/rewrite/biliad.conf",
+      "file": "qx-rewrite-biliad.conf",
+      "bytes": 5760,
+      "sha256": "e71795bdc676e3541d5c792802108edb4d764f9ac02ecd29e8b55caea03bf3e7",
+      "source_sha256": "2a1570bc5bb0d10f9d62952606457b9119db0b40128a3159ec12c9a10859ee3a",
+      "adjustments": [
+        "修正SIM参数重定向缺失的 url 302 分隔符；其余内容保留"
+      ],
+      "fetched": "2026-09-29",
+      "native_qx_parser_disabled": false,
+      "mirror_url": "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-rewrite-biliad.conf"
+    },
+    {
+      "original_url": "https://yfamilys.com/rewrite/thunder.conf",
+      "file": "qx-rewrite-thunder.conf",
+      "bytes": 401,
+      "sha256": "91faa833079d61a92783a82832da37a5b6e150a40726e15846e1b5a721e4ba92",
+      "source_sha256": "91faa833079d61a92783a82832da37a5b6e150a40726e15846e1b5a721e4ba92",
+      "adjustments": [],
+      "fetched": "2026-09-29",
+      "native_qx_parser_disabled": false,
+      "mirror_url": "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-rewrite-thunder.conf"
+    }
+  ],
+  "revision": "2026-09-30 新仓库迁移、GitHub统一、Greasy Fork同组、pomo.mom直连",
+  "repository": "https://github.com/woziji159/Quantunmult",
+  "base_profile": {
+    "file": "quantumultx_manual_regions_auto_select.conf",
+    "sha256": "b69e2f8ab84cde59e618bfb438d9e877723ab9322f8a4f58e5f3b1078e9baa15"
+  },
+  "policy_groups": 42,
+  "custom_rules": [
+    "host-suffix, pomo.mom, direct",
+    "host-suffix, greasyfork.org, GitHub"
+  ],
+  "github_rules_merged": 55,
+  "region_policy_mode": "保留用户文件：自动选择为自动测速；六地区为手动候选static"
+}
