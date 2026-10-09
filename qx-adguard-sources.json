@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-09T23:27:56.900319+00:00",
+  "audit_date_local": "2026-10-10",
+  "source": {
+    "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+    "last_modified": "2026-10-09T22:15:11.401Z",
+    "bytes": 4409130,
+    "sha256": "b4cd4c8d3cce3a72408ddcaeed4f4faed3366ce730d74dd9b44b6836c3e98c06",
+    "license": "GPL-3.0",
+    "preserved_source_file": "AdGuardSDNSFilter.filter.txt"
+  },
+  "method": {
+    "dns_hostname_semantics": "https://adguard-dns.io/kb/general/dns-filtering-syntax/",
+    "convertible_block_pattern": "Strict ||valid.ascii.domain^ without modifiers only.",
+    "exception_safety": "All @@ rules analyzed. Domain exceptions remove both ancestors and descendants; wildcard/unanchored masks widen to a stable suffix. Unproven regex intersections stop every candidate. Mandatory non-hostname literals prove the current regex exception has no DNS-hostname match.",
+    "existing_exact_hosts_not_deduplicated": "An existing host exact rule does not cover all subdomains of a host-suffix candidate.",
+    "existing_main_config_modified": false,
+    "new_remote_route_overrides_created": false
+  },
+  "counts": {
+    "comment_or_empty": 1660,
+    "block_source_rules": 181426,
+    "simple_domain_source_rules": 180678,
+    "invalid_or_ip_domain": 72,
+    "unsupported_mask_or_non_domain": 644,
+    "unsupported_regex": 22,
+    "unsupported_modifier": 10,
+    "exception_rules": 211,
+    "disabled_by_badfilter": 1,
+    "unique_simple_domains": 180677,
+    "already_blocked_by_existing_suffix_or_keyword": 171638,
+    "exception_possible_conflict": 86,
+    "existing_local_user_policy": 7,
+    "apple_service_family": 24,
+    "output_host_suffix_rules": 8922
+  },
+  "exception_classification_counts": {
+    "regex_dns_disjoint": 1,
+    "domain_family": 180,
+    "exact_domain_conservative_family": 19,
+    "wildcard_conservative_suffix": 10,
+    "unanchored_conservative_suffix": 1
+  },
+  "badfilter_disabled_rules": [
+    "wykop.pl",
+    "||fixtures.onet.pl^",
+    "||linksprf.com^",
+    "||pl.ua^",
+    "||tn.porngo.xxx^"
+  ],
+  "apple_service_families": [
+    "aaplimg.com",
+    "apple-cloudkit.com",
+    "apple-dns.net",
+    "apple-livephotoskit.com",
+    "apple-mapkit.com",
+    "apple.cn",
+    "apple.com",
+    "apple.com.cn",
+    "apple.news",
+    "applemusic.com",
+    "appletv.com",
+    "cdn-apple.com",
+    "icloud-content.com",
+    "icloud-content.com.cn",
+    "icloud.cn",
+    "icloud.com",
+    "icloud.com.cn",
+    "itunes.com",
+    "me.com",
+    "mzstatic.com",
+    "push-apple.com",
+    "shazam.com"
+  ],
+  "existing_filter_sources": [
+    {
+      "file": "qx-cn-rules-13.list",
+      "bytes": 969463,
+      "sha256": "b3783141a5334cc9fb2ba68ef49d734102f48089ba4d62d216c9f4ec8c8a2692"
+    },
+    {
+      "file": "qx-cn-rules-14.list",
+      "bytes": 950108,
+      "sha256": "2e3cac0060489c43384b86b2f66dcde6b985e7200aab776807051d92b0c7e050"
+    },
+    {
+      "file": "qx-cn-rules-15.list",
+      "bytes": 939752,
+      "sha256": "46fb46b30accd4d15d6b1b94967ebe14adb4467fe567d44fbd523688133f0d97"
+    },
+    {
+      "file": "qx-rules-01.list",
+      "bytes": 950058,
+      "sha256": "fcbd40055cc2145613b8df84a361840010960a6e5fc4086fdb949f48f5204e5e"
+    },
+    {
+      "file": "qx-rules-02.list",
+      "bytes": 950049,
+      "sha256": "824908a46198a9b2ef60d3374556556e5a4e30ed7f6f452cbafbd3c099b572c5"
+    },
+    {
+      "file": "qx-rules-03.list",
+      "bytes": 950045,
+      "sha256": "e214ab9116be166ee22c3fcc92a5bbb5c00060da6fb86e036740f340d426b542"
+    },
+    {
+      "file": "qx-rules-04.list",
+      "bytes": 950031,
+      "sha256": "cc700b6e095386d9d5122745e4d00bd20f44e2e3cf50c9691be4a4a6a964bbcf"
+    },
+    {
+      "file": "qx-rules-05.list",
+      "bytes": 950028,
+      "sha256": "dbdf8de28aac5440ae2156747d0acf061da1c57ec44590a4c9759373202f1176"
+    },
+    {
+      "file": "qx-rules-06.list",
+      "bytes": 950047,
+      "sha256": "02ba6aa632cdfd32bcb0b91306b336ef70e193233612af8927480de4cd0bce4d"
+    },
+    {
+      "file": "qx-rules-07.list",
+      "bytes": 950014,
+      "sha256": "237524c68ed7abbe7b4f02256518398d81897851f3647d4e04b7d644db1bb95a"
+    },
+    {
+      "file": "qx-rules-08.list",
+      "bytes": 950047,
+      "sha256": "ff079648a12761b82b5ca7711d740987bace9d47f89aa99b1e2e6374df4c1255"
+    },
+    {
+      "file": "qx-rules-09.list",
+      "bytes": 950030,
+      "sha256": "d74820de0296e7f30d7ba021edb2195f2f1de8f174a33f192fab14874f404ec6"
+    },
+    {
+      "file": "qx-rules-10.list",
+      "bytes": 950059,
+      "sha256": "5cbb2d1901c828972a5d6c0d5572beb7a3e324a1b1ba6271914d067023eac43b"
+    },
+    {
+      "file": "qx-rules-11.list",
+      "bytes": 950009,
+      "sha256": "b8015798fb599e93883c28cd5e6aba36362abe2dda54ede1d74b829cc6dcc27e"
+    },
+    {
+      "file": "qx-rules-12.list",
+      "bytes": 950034,
+      "sha256": "a59c7d66568e1235c033ccd6062e8a8a8a4e918cca12a0272125f2ba3db48f23"
+    }
+  ],
+  "existing_filter_rule_count": 358518,
+  "existing_block_rule_types": {
+    "host-suffix": 279289,
+    "host-keyword": 278,
+    "ip-cidr": 491,
+    "ip6-cidr": 3,
+    "host": 16524
+  },
+  "output": {
+    "file": "qx-adguard-dns-delta-conservative.list",
+    "rule_count": 8922,
+    "sha256": "8615209e9bcde450aaaab8a2db17409dc7d7ae33cdc7f04f3ee2ea638efb9bd9"
+  },
+  "tests": {
+    "all_passed": true,
+    "test_count": 21,
+    "report_file": "conversion-tests.json"
+  },
+  "excluded_domain_examples": {
+    "exception_possible_conflict": [
+      "2o7.net",
+      "a8.net",
+      "ads.nicovideo.jp",
+      "ads.tvb.com",
+      "adsterra.com",
+      "advertising.com",
+      "adwolf.ru",
+      "afi-b.com",
+      "analytics.edgekey.net",
+      "aniview.com",
+      "app.adjust.com",
+      "app.appsflyer.com",
+      "appcast.io",
+      "appmetrica.yandex.com",
+      "appodeal.com",
+      "awin1.com",
+      "belgium.wolterskluwer.com",
+      "bizrate.com",
+      "bluecore.com",
+      "brsrvr.com",
+      "c.statcounter.com",
+      "commander1.com",
+      "conde.digital",
+      "cptrack.de",
+      "crazyegg.com",
+      "crwdcntrl.net",
+      "dable.io",
+      "daraz.com",
+      "data-e0448d0e4a.herz-fuer-tiere.de",
+      "data.digital.costco.ca"
+    ],
+    "apple_service_family": [
+      "api-adservices.apple.com",
+      "beacon.shazam.com",
+      "books-analytics-events.apple.com",
+      "books-analytics-events.news.apple-dns.net",
+      "drupalmetrics.ppg.apple.com",
+      "graffiti-tags.apple.com",
+      "iadsdk.apple.com",
+      "metrics-config.icloud.com",
+      "metrics.apple.com",
+      "metrics.icloud.com",
+      "metrics.mzstatic.com",
+      "news-app-events.apple.com",
+      "news-events.apple.com",
+      "news-sports-events.apple.com",
+      "notes-analytics-events.apple.com",
+      "notes-analytics-events.news.apple-dns.net",
+      "securemetrics-z.v.aaplimg.com",
+      "securemetrics.apple.com",
+      "securemvt.apple.com",
+      "stocks-analytics-events.apple.com",
+      "stocks-analytics-events.news.apple-dns.net",
+      "supportmetrics.apple.com",
+      "weather-analytics-events.apple.com",
+      "weather-analytics-events.news.apple-dns.net"
+    ],
+    "existing_local_user_policy": [
+      "a.koodomobile.com",
+      "b.koodomobile.com",
+      "data.ks.koodomobile.com",
+      "getui.com",
+      "msg.umengcloud.com",
+      "tracking.miui.com",
+      "umeng.com"
+    ]
+  }
+}
