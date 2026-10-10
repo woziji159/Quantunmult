@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-11",
+  "iphone_tested": false,
+  "bili_navigation": {
+    "total": 29,
+    "passed": 29,
+    "iPhoneTested": false
+  },
+  "bili_response": {
+    "total": 13,
+    "passed": 13,
+    "note": "Isolated Node vm of official pinned bundle with QX globals, all network disabled; synthetic protobuf/JSON fixtures; not iPhone runtime. All fixtures assert zero network calls and zero persistent storage writes."
+  },
+  "douyin": {
+    "scriptSha256": "d84770cf0665ab4b2813c23e49e111db09fb3e5346e336f395b5ca61eec4b1d0",
+    "fixtureCount": 19,
+    "passed": 19,
+    "iPhoneTested": false
+  },
+  "icu": {
+    "engine": "Foundation/ICU",
+    "failures": [],
+    "rules_checked": 1773
+  },
+  "jq_expressions_compiled": 31,
+  "representative_request_conflicts": {
+    "urls": 212,
+    "failed": 0,
+    "note": "Search.DefaultWords intentionally has a request-only handler."
+  },
+  "preserved_main_sections": {
+    "general": true,
+    "dns": true,
+    "policy": true,
+    "server_remote": true,
+    "filter_remote": true,
+    "server_local": true,
+    "filter_local": true,
+    "rewrite_local": true,
+    "task_local": true,
+    "mitm": true
+  },
+  "scope": "Includes main local rules, active app/web/Thunder resources and optional disabled Douyin experiment. Real iPhone ad outcomes remain unverified."
+}

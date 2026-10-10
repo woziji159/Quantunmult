@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-11",
+  "iphone_tested": false,
+  "bili_sources": [
+    {
+      "file": "latest.json",
+      "url": "https://api.github.com/repos/Biliverse/ADBlock/releases/latest",
+      "bytes": 17484,
+      "sha256": "0e98820e957cd9f1411fddf7e3a0578ab3e396b012e6dd53fa725e672a31fc4f"
+    },
+    {
+      "file": "adblock-response-current.mjs",
+      "url": "https://raw.githubusercontent.com/Biliverse/ADBlock/main/src/process/Response.mjs",
+      "bytes": 45810,
+      "sha256": "858c8027bc520721999bfe6baeb2119841ba70cda632293f39c06016d85206af"
+    },
+    {
+      "file": "enhanced-database-current.mjs",
+      "url": "https://raw.githubusercontent.com/Biliverse/Enhanced/main/src/function/database.mjs",
+      "bytes": 21534,
+      "sha256": "1e7e73c8642b27e43ec7dc6a1594c4a474cf05f27143051b885ca6e42fdc9863"
+    },
+    {
+      "file": "adblock-current.snippet",
+      "url": "https://github.com/Biliverse/ADBlock/releases/latest/download/BiliBili.ADBlock.snippet",
+      "bytes": 5661,
+      "sha256": "508f1673f4580e376930eec78e4208abcb5639c162376095be0dab3cb0c9e52c"
+    },
+    {
+      "file": "qx-filter-sample.conf",
+      "url": "https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample.conf",
+      "bytes": 42661,
+      "sha256": "60acd8eac964c012e6278791dc9e22b5ae2c950b04c5ae350eed795ea7d1234b"
+    }
+  ],
+  "bili_response_diagnostic_patch": {
+    "input_sha256": "8307cecc335a49ad5103b5fa5adf46efa4000287d0220e4b4af781b4461de057",
+    "file": "bili-adblock-response-20261011.js",
+    "sha256": "9beef2563ecccffd17371a15d80488fdc24659d02f75f6b65c0b281463cbd70b",
+    "bytes": 1091915,
+    "old": "t.logLevel=c.LogLevel,t.info(`url: ${a.toJSON()}`),t.info(`PATHs: ${s}`),t.info(`FORMAT: ${l}`);",
+    "new": "t.logLevel=c.LogLevel,t.info(`url: ${a.hostname}${a.pathname}`),t.info(`PATHs: ${s}`),t.info(`FORMAT: ${l}`);if(/^\\/bilibili\\.app\\.(view\\.v1\\.View|viewunite\\.v1\\.View|playerunite\\.v1\\.Player)\\//.test(a.pathname))console.log(`[QX-BILI-20261011] response-script-hit ${a.hostname}${a.pathname} format=${[\"application/grpc\",\"application/grpc+proto\",\"application/grpc-web\",\"application/json\",\"text/json\",\"application/octet-stream\",\"application/protobuf\",\"application/x-protobuf\",\"application/vnd.google.protobuf\"].includes(l)?l:l===void 0?\"missing\":\"other\"}`);",
+    "changes_behavior": false,
+    "diagnostic": "known video path handler hit; content-type whitelist; no query or body; bypasses LogLevel only for this diagnostic"
+  },
+  "douyin": {
+    "date": "2026-10-11",
+    "scope": "Legacy Douyin JSON feed ad experiment only",
+    "iphoneTested": false,
+    "provenLatestClientCompatibility": false,
+    "tests": 19,
+    "files": [
+      {
+        "file": "qx-rewrite-douyin-experimental.conf",
+        "bytes": 883,
+        "sha256": "347d0d3aed76ea2c73ed5cd292771d7985804f29ab07a99a9f138f890e5525fe"
+      },
+      {
+        "file": "qx-douyin-feed-experimental.js",
+        "bytes": 2730,
+        "sha256": "d84770cf0665ab4b2813c23e49e111db09fb3e5346e336f395b5ca61eec4b1d0"
+      },
+      {
+        "file": "report.md",
+        "bytes": 7359,
+        "sha256": "cba391eb10bafc111afc09bc5ae9a2b6c5fd35a8920beaea66c8231af4647eab"
+      },
+      {
+        "file": "douyin-fixture-results.json",
+        "bytes": 1793,
+        "sha256": "d211f8104d0d3c209143340e6db7dad2be5a048fb2e008a66aa7856d420bfecf"
+      }
+    ]
+  },
+  "unresolved": [
+    "B站视频下广告实际原因",
+    "X官方App推广帖",
+    "微信未成年模式同时搜索",
+    "抖音中间＋",
+    "抖音具体畅玩权益卡",
+    "支付宝主首页净化"
+  ],
+  "published_scripts": {
+    "qx-bili-navigation.js": {
+      "sha256": "4d8ff314b9828da7023ae58a98c1420c9b2c861fbb28180a3269f15a8206bbc0",
+      "bytes": 1889
+    },
+    "bili-adblock-response-20261011.js": {
+      "sha256": "9beef2563ecccffd17371a15d80488fdc24659d02f75f6b65c0b281463cbd70b",
+      "bytes": 1091915
+    },
+    "qx-douyin-feed-experimental.js": {
+      "sha256": "d84770cf0665ab4b2813c23e49e111db09fb3e5346e336f395b5ca61eec4b1d0",
+      "bytes": 2730
+    }
+  }
+}

@@ -6,7 +6,7 @@
   "upstream_advertised_app_count": 730,
   "upstream_advertised_count_includes_domain_only_sections": true,
   "hostname_count": 1005,
-  "script_url_count": 77,
+  "script_url_count": 78,
   "source_urls": [
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet",
     "https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/AmapAds.conf",
@@ -16,7 +16,7 @@
   ],
   "fmz_source_sha256": "45e06775655eebba32a2a816b9c44c5b11175e57ebcd2984d39a7b618a78243d",
   "fmz_source_commit": "3ca7487b4e4b86d9af76e50df72c62eacfbb659e",
-  "resource_sha256": "8aabfcf00c0da0a4cec1f064d02ffd82e51f21fa60dad8da0d32622d192a8a8d",
+  "resource_sha256": "9b0a980a770f7385b64e828564e33111a64b217564ef6570243fd8e10ca7f6bf",
   "apps": {
     "12123": 1,
     "12306": 1,
@@ -615,7 +615,8 @@
     "https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Scripts/miguvideo/miguvideo_ads.js",
     "https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js",
     "https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js",
-    "https://raw.githubusercontent.com/woziji159/Quantunmult/main/bili-adblock-fixed-response.js",
+    "https://raw.githubusercontent.com/woziji159/Quantunmult/main/bili-adblock-response-20261011.js",
+    "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-bili-navigation.js",
     "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-kugou-clean.js",
     "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-x-web-ads.js",
     "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js",
@@ -1827,5 +1828,12 @@
     "native_x_app_supported": false,
     "web_resource": "qx-web-sources.json",
     "specific_apps_source": "qx-specific-apps-sources.json"
+  },
+  "oct11_update": {
+    "source_manifest": "qx-oct11-sources.json",
+    "navigation": "remove bottom mall and publish entries with diagnostic logging",
+    "video_ad_fix_confirmed": false,
+    "native_x_app_supported": false,
+    "douyin_experiment": "separate resource, disabled by default in full profile"
   }
 }

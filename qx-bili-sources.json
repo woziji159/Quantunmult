@@ -84,5 +84,12 @@
       "bytes": 1094,
       "sha256": "8882676b929ac89dfc0bb70eced03260fc7f0817fa2fa4c0ffdc4af8185716cf"
     }
+  },
+  "oct11_update": {
+    "navigation_script": "qx-bili-navigation.js",
+    "response_script": "bili-adblock-response-20261011.js",
+    "response_sha256": "9beef2563ecccffd17371a15d80488fdc24659d02f75f6b65c0b281463cbd70b",
+    "note": "Previous entries record Oct10 provenance. Current rule uses these Oct11 scripts; video ad transformation unchanged.",
+    "manifest": "qx-oct11-sources.json"
   }
 }
