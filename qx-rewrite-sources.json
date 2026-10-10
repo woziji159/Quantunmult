@@ -1,12 +1,12 @@
 {
   "checked_at": "2026-10-10",
   "device_tested": false,
-  "rule_count": 1559,
+  "rule_count": 1564,
   "app_sections_with_rules": 537,
   "upstream_advertised_app_count": 730,
   "upstream_advertised_count_includes_domain_only_sections": true,
-  "hostname_count": 1002,
-  "script_url_count": 75,
+  "hostname_count": 1005,
+  "script_url_count": 77,
   "source_urls": [
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet",
     "https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/AmapAds.conf",
@@ -16,7 +16,7 @@
   ],
   "fmz_source_sha256": "45e06775655eebba32a2a816b9c44c5b11175e57ebcd2984d39a7b618a78243d",
   "fmz_source_commit": "3ca7487b4e4b86d9af76e50df72c62eacfbb659e",
-  "resource_sha256": "a608f79673275e976ebd48ff91153045ea4a4fee2945946900b0b212a0d098b0",
+  "resource_sha256": "8aabfcf00c0da0a4cec1f064d02ffd82e51f21fa60dad8da0d32622d192a8a8d",
   "apps": {
     "12123": 1,
     "12306": 1,
@@ -558,7 +558,6 @@
   },
   "scripts": [
     "https://github.com/Biliverse/ADBlock/releases/download/v0.7.3/request.bundle.js",
-    "https://github.com/Biliverse/ADBlock/releases/download/v0.7.3/response.bundle.js",
     "https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js",
     "https://raw.githubusercontent.com/Maasea/sgmodule/refs/heads/master/Script/Youtube/youtube.response.js",
     "https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js",
@@ -616,6 +615,9 @@
     "https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Scripts/miguvideo/miguvideo_ads.js",
     "https://raw.githubusercontent.com/ishowshu/qx/refs/heads/main/script/goofish.js",
     "https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js",
+    "https://raw.githubusercontent.com/woziji159/Quantunmult/main/bili-adblock-fixed-response.js",
+    "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-kugou-clean.js",
+    "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-x-web-ads.js",
     "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js",
     "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/airchina.js",
     "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/alicdn.js",
@@ -1805,9 +1807,25 @@
     }
   ],
   "limitations": [
-    "不是所有iOS应用都有有效重写；未逐款实测",
-    "源码中部分规则会清理推广、搜索推荐、活动及界面元素",
-    "抖音信息流/微信通用开屏和朋友圈/支付宝主首页不能保证",
-    "脚本URL当前可达不保证未来或用户线路可达"
-  ]
+    "未在用户iPhone实测；新增规则已做离线结构测试",
+    "抖音加号、付费权益卡、微信未成年模式加搜索、支付宝主界面与X原生App无可靠已验证方案",
+    "微信/QQ/抖音小程序不能保证全部开屏/插屏/激励广告清除"
+  ],
+  "expanded_update": {
+    "date": "2026-10-10",
+    "bili_rules_replaced": 19,
+    "added_rules": 5,
+    "bili_parameter_override": [
+      "Splash=true",
+      "View.AD=true"
+    ],
+    "other_bili_preferences_preserved": true,
+    "bili_endpoint_expansion": [
+      "app.biliapi.com",
+      "query suffix"
+    ],
+    "native_x_app_supported": false,
+    "web_resource": "qx-web-sources.json",
+    "specific_apps_source": "qx-specific-apps-sources.json"
+  }
 }

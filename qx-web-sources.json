@@ -1,0 +1,129 @@
+{
+  "checked_at": "2026-10-10",
+  "device_tested": false,
+  "limbopro_source": "https://github.com/limbopro/Adblock4limbo",
+  "limbopro_header_date": "2026-10-06",
+  "source_sha256": "2b70cd945be840607a76380d4be3074f6bf13b7bea25885f5965d67032ce869a",
+  "baidu_css_sources": [
+    {
+      "file": "adguard-annoyances.txt",
+      "url": "https://filters.adtidy.org/extension/ublock/filters/14.txt",
+      "bytes": 4119652,
+      "sha256": "4fe4551cc9f98bbcae201d48142f1437e4e39d297ab59c87873ea7bad8affe0c"
+    },
+    {
+      "file": "adguard-chinese.txt",
+      "url": "https://filters.adtidy.org/extension/ublock/filters/224.txt",
+      "bytes": 735257,
+      "sha256": "215440a3a67cfd2dd771f55cacdd4a4fcaf60ff4e3d7fc1e2ff17a2c7e142655"
+    },
+    {
+      "file": "adguard-mobileapp.txt",
+      "url": "https://filters.adtidy.org/extension/ublock/filters/20.txt",
+      "bytes": 337953,
+      "sha256": "ff997d3f547dd58621d2be2d1054a89c168ae0ed788f60cbaf93ca82d96fbe22"
+    }
+  ],
+  "baidu_selectors": [
+    {
+      "file": "adguard-mobileapp.txt",
+      "line": 2136,
+      "rule": "baidu.com###page_wrapper > div > .tgSGud4cOeqca",
+      "selector": "#page_wrapper > div > .tgSGud4cOeqca"
+    },
+    {
+      "file": "adguard-mobileapp.txt",
+      "line": 2982,
+      "rule": "m.baidu.com###page-copyright > div[style^=\"position: fixed;\"][style*=\"height: 52px;\"]",
+      "selector": "#page-copyright > div[style^=\"position: fixed;\"][style*=\"height: 52px;\"]"
+    },
+    {
+      "file": "adguard-mobileapp.txt",
+      "line": 3056,
+      "rule": "baidu.com##.searchbox-exp > div[style=\"overflow: hidden;background: #fff;\"]",
+      "selector": ".searchbox-exp > div[style=\"overflow: hidden;background: #fff;\"]"
+    },
+    {
+      "file": "adguard-mobileapp.txt",
+      "line": 3829,
+      "rule": "baidu.com###search-appPromote",
+      "selector": "#search-appPromote"
+    },
+    {
+      "file": "adguard-mobileapp.txt",
+      "line": 4692,
+      "rule": "m.baidu.com##.diversion-waterfall-b",
+      "selector": ".diversion-waterfall-b"
+    },
+    {
+      "file": "adguard-mobileapp.txt",
+      "line": 5246,
+      "rule": "baidu.com###page-copyright > div[style^=\"position: fixed;\"][ref]",
+      "selector": "#page-copyright > div[style^=\"position: fixed;\"][ref]"
+    },
+    {
+      "file": "adguard-chinese.txt",
+      "line": 17075,
+      "rule": "m.baidu.com##.ec_adv",
+      "selector": ".ec_adv"
+    },
+    {
+      "file": "adguard-chinese.txt",
+      "line": 17881,
+      "rule": "m.baidu.com##.news_ad",
+      "selector": ".news_ad"
+    },
+    {
+      "file": "adguard-chinese.txt",
+      "line": 20771,
+      "rule": "ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##.ec_bdtg",
+      "selector": ".ec_bdtg"
+    },
+    {
+      "file": "adguard-chinese.txt",
+      "line": 20776,
+      "rule": "ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##.ecl-tg-content",
+      "selector": ".ecl-tg-content"
+    },
+    {
+      "file": "adguard-chinese.txt",
+      "line": 20779,
+      "rule": "ipv6.baidu.com,www.baidu.com,www1.baidu.com,xueshu.baidu.com##.ecom-result",
+      "selector": ".ecom-result"
+    }
+  ],
+  "changes": [
+    {
+      "removed": "^https?:\\/\\/www\\.pornhub\\.com$ url 307 https://cn.pornhub.com",
+      "reason": "只整理广告净化，不添加网站跳转/评论跳转"
+    },
+    {
+      "removed": "^https?:\\/\\/www\\.javlibrary\\.com\\/img\\/.*\\.gif url 307 https://www.javlibrary.com/favicon.ico",
+      "reason": "只整理广告净化，不添加网站跳转/评论跳转"
+    },
+    {
+      "removed": "(https://www.javlibrary.com/cn/videoreviews.php\\?v=)(.*?)(&mode=.*) url 307 https://www.javlibrary.com/cn/?v=$2",
+      "reason": "只整理广告净化，不添加网站跳转/评论跳转"
+    },
+    {
+      "removed": "https?:\\/\\/(www|m)\\.baidu\\.com(/$|\\/\\?ref.*) url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js",
+      "reason": "百度搜索由独立CSS脚本处理，避免重复注入"
+    },
+    {
+      "removed": "https?:\\/\\/(www|m)\\.baidu\\.com\\/(from=|s\\?) url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js",
+      "reason": "百度搜索由独立CSS脚本处理，避免重复注入"
+    },
+    {
+      "corrected": "^http?:\\/\\/www\\.tz659\\.com\\/(?!(.*(cdn-cgi|verify|auth|captch|(\\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mov|m4v|avi|mkv|flv|rmvb|wmv|rm|asf|asx|mp3|json|ico|otf|ttf))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js",
+      "reason": "修复https协议拼写"
+    }
+  ],
+  "rule_count": 122,
+  "hostname_count": 461,
+  "limitations": [
+    "百度样式选择器会随网页改版失效，需手机重载验证",
+    "毒奶网页计划只处理所列网站，不等于所有网页",
+    "保留毒奶原作者脚本及工具入口，百度搜索不用该脚本"
+  ],
+  "license": "Baidu selectors GPL-3.0; limbopro module MIT"
+}

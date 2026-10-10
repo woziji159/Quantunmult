@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-10",
+  "kind": "Native Quantumult X supplemental host-suffix rules; depends on the existing 15 rule resources.",
+  "sources": {
+    "adguard": {
+      "file": "adguard-dns.txt",
+      "sha256": "ef373e163e2041ca49b5a0dd4aedb13c9e4915c28c5d16ded6098a3b585135f3",
+      "bytes": 4410608,
+      "declared_update": "! Last modified: 2026-10-10T04:18:14.029Z",
+      "counts": {
+        "active_noncomment_source_rules": 181493,
+        "supported_domain_suffix_rules": 180744,
+        "invalid_or_ip_hostname": 72,
+        "unsupported_mask": 644,
+        "unsupported_regex": 22,
+        "unsupported_modifier": 10,
+        "runtime_exception_rules": 211,
+        "disabled_by_badfilter": 1
+      },
+      "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
+    },
+    "antiad": {
+      "file": "antiad-quanx.txt",
+      "sha256": "7145c4076ede0315366c56d7b5c5b744a73d36ac0d2cad887c061821a4bcbcc1",
+      "bytes": 3859628,
+      "declared_update": "#VER=20261008071316",
+      "counts": {
+        "active_noncomment_source_rules": 101281,
+        "supported_domain_suffix_rules": 101281
+      },
+      "url": "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-quanx.txt"
+    },
+    "adrules": {
+      "file": "adrules-dns.txt",
+      "sha256": "f03cdce07b593ce71f98c3f5ed350793866aeee1d9bfe93b642520c112462ae6",
+      "bytes": 4802451,
+      "declared_update": "! Update: 2026-10-10 11:50:55(GMT+8)",
+      "counts": {
+        "active_noncomment_source_rules": 201476,
+        "unsupported_regex": 27,
+        "unsupported_mask": 409,
+        "supported_domain_suffix_rules": 201040
+      },
+      "url": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt"
+    }
+  },
+  "counts": {
+    "already_covered_by_uncontested_reject_suffix": 193671,
+    "retained_despite_competing_baseline_nonreject": 6135,
+    "source_allowlist_or_badfilter_family": 1749,
+    "existing_local_user_policy": 16,
+    "apple_service_family": 33,
+    "source_wildcard_exception_intersection": 24,
+    "covered_by_safe_collection_parent": 290,
+    "unique_supported_source_domains": 227041,
+    "output_suffix_rules": 31258,
+    "old_baseline_keywords_used_for_deduplication": 0
+  },
+  "exception_count": 490,
+  "exception_kind_counts": {
+    "regex_dns_disjoint": 1,
+    "domain_family": 289,
+    "exact_anchor_conservative_family": 19,
+    "wildcard_glob_intersection": 12,
+    "unanchored_conservative_suffix": 1,
+    "build_allow_domain_conservative_family": 159,
+    "build_allow_regex_conservative_family": 3,
+    "build_allow_regex_domain_ancestors": 1,
+    "badfilter_disabled_family": 5
+  },
+  "outputs": [
+    {
+      "file": "qx-dns-ads-01.list",
+      "rule_count": 22073,
+      "bytes": 900022,
+      "sha256": "c6081ef962392385db91d7e3579bb18cc3805f42ccc6903b37ccaf203d35d2bd"
+    },
+    {
+      "file": "qx-dns-ads-02.list",
+      "rule_count": 9185,
+      "bytes": 382119,
+      "sha256": "bddffccf09fe670e64a0bcf0a1e6461d9ec5792203d98d2011d6f68df1de527e"
+    }
+  ],
+  "method": {
+    "all_sources_cross_protected": true,
+    "old_keywords_used_for_deduplication": false,
+    "existing_reject_suffix_pruning": "Only when no existing nonreject host/suffix domain family can compete. Existing exact-host rejects do not establish suffix coverage.",
+    "wildcard_exceptions": "Glob-language intersection with the candidate domain and arbitrary descendants; impossible-to-analyze exceptions prohibit output.",
+    "adrules_regex_allowlist": "Build-time regex.search(source-rule-domain), applied to candidate and ancestors, plus conservative family protection for known patterns. These are not invented native DNS runtime regex exceptions.",
+    "local_config_modified": false,
+    "publish_directory_modified": false
+  },
+  "service_source_research": {
+    "18bit": {
+      "page": "https://go.18bit.cn/pr/dns-ad-list.html",
+      "public_upstreams": [
+        "anti-AD",
+        "Cats-Team/AdRules"
+      ],
+      "statistics_as_of": "2022-06-10",
+      "private_lists_included": false
+    },
+    "guansheng": {
+      "project": "https://github.com/guandasheng/TheBestAdrules",
+      "public_blacklist_url": "https://raw.githubusercontent.com/guandasheng/TheBestAdrules/main/all.txt",
+      "blacklist_http_status": 404,
+      "latest_public_commit_utc": "2024-07-13T15:25:39Z",
+      "latest_public_commit": "b02d25a1f5329dafe7a3201ab777ab080d9485f2",
+      "public_add_only_contains_allow_exception": true,
+      "members_current_rule_database_available": false
+    }
+  },
+  "adash_regression": {
+    "domain": "adash.man.aliyuncs.com",
+    "present_in_supported_sources": [
+      "adguard",
+      "antiad",
+      "adrules"
+    ],
+    "retained": true,
+    "matching_output_suffixes": [
+      "adash.man.aliyuncs.com"
+    ]
+  },
+  "limitations": [
+    "Only compatible domain-suffix blocks are converted; CSS, URL paths, regex/modifiers and paid entitlements are not reproduced.",
+    "Exceptions protect this supplemental merge; this does not retroactively remove conflicts in older baseline lists.",
+    "No claim of all-app removal, private 18bit/Guan Sheng database inclusion, or iPhone runtime validation."
+  ],
+  "source_allowlists": [
+    "https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt",
+    "https://raw.githubusercontent.com/Cats-Team/AdRules/script/mod/rules/dns-allowlist.txt",
+    "https://raw.githubusercontent.com/guandasheng/TheBestAdrules/main/add.txt"
+  ],
+  "licenses": [
+    "LICENSE.AdGuard.GPL-3.0.txt",
+    "LICENSE.anti-AD.MIT.txt",
+    "LICENSE.GuanSheng.MIT.txt",
+    "AdRules-UPSTREAM-SOURCES.md",
+    "qx-dns-ads-attribution.md"
+  ]
+}

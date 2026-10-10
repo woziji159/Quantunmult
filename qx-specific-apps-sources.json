@@ -1,0 +1,87 @@
+{
+  "checked_date": "2026-10-10",
+  "scope": "Kugou and X website, not native X app; synthetic fixtures only",
+  "sources": [
+    {
+      "local_file": "aetso-kugou.js",
+      "url": "https://raw.githubusercontent.com/AEtso/Loon/master/Scripts/kugou.js",
+      "status": 200,
+      "bytes": 2900,
+      "sha256": "6063f59363090b1434f415eda9ade4f6011a7b409d0d500677cc4a081f89f43d",
+      "matches_reviewed_copy": true
+    },
+    {
+      "local_file": "X_ads.js",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/X/X_ads.js",
+      "status": 200,
+      "bytes": 15446,
+      "sha256": "c6cd92e41ccc24cda6fbadcc3cefb1538294353ad809c40855cb1224f8bf2a6a",
+      "matches_reviewed_copy": true
+    },
+    {
+      "local_file": "xweb",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/XWebAds.snippet",
+      "status": 200,
+      "bytes": 694,
+      "sha256": "b62bb0581c65b3512cbb6a61effa43a2693721e36cc40bf554c354c0fffc58b4",
+      "matches_reviewed_copy": true
+    },
+    {
+      "local_file": "ddg-applet",
+      "url": "https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/Applet.conf",
+      "status": 200,
+      "bytes": 2970,
+      "sha256": "6259647585e993f4b28897e8cba3b96366a775ed8f897b87d6cf8547e7ae28f0",
+      "matches_reviewed_copy": true
+    },
+    {
+      "local_file": "chxm-Advertising/AppAd.conf",
+      "url": "https://raw.githubusercontent.com/chxm1023/Advertising/main/AppAd.conf",
+      "status": 200,
+      "bytes": 14298,
+      "sha256": "70823f8e694f034d614a1a4fc3510b807c0a2c1177aa9759f4100563a08c4237",
+      "matches_reviewed_copy": true
+    }
+  ],
+  "deliverables": [
+    {
+      "path": "candidates.conf",
+      "bytes": 1184,
+      "sha256": "d3c50c1da894a362600846454d1dd849f1becb88687fa37b7f0e17d87dc7283f"
+    },
+    {
+      "path": "candidates.list",
+      "bytes": 153,
+      "sha256": "5c3fe4e65e7b7892d70af5a0e0de7fb0efdc0276792543e206d835eaac10df55"
+    },
+    {
+      "path": "qx-kugou-clean.js",
+      "bytes": 1803,
+      "sha256": "adcb7794fa3d6bc609dbafc05a008c94ab450507c52da12d8aa9115f02725dc4"
+    },
+    {
+      "path": "qx-x-web-ads.js",
+      "bytes": 1888,
+      "sha256": "3fc572acc299ff9f8df1c14ec7d6e8cccb4a202858ab2c2e237d941d3c438bc6"
+    },
+    {
+      "path": "test-fixtures.js",
+      "bytes": 4382,
+      "sha256": "1b6efdddc81022106e82ec4dbfb3ca3d50ce7b528f8f5d72d8e638b3219bbb82"
+    },
+    {
+      "path": "fixture-results.json",
+      "bytes": 1548,
+      "sha256": "78bb004a26c7e7b3b870be0d21ba66eb9d44e4314f0c5938e4dc58c9e544192c"
+    }
+  ],
+  "fixture_count": 15,
+  "passed": 15,
+  "app2smile_tree_check": {
+    "url": "https://api.github.com/repos/app2smile/rules/git/trees/master?recursive=1",
+    "tree_sha": "df6366a7024e0b3f0aa3510c5b791eea6f3cba89",
+    "truncated": false,
+    "path_count": 75,
+    "twitter_paths": []
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-10",
+  "replacement_rules": 19,
+  "new_rules": 1,
+  "response_script": {
+    "source": "https://github.com/Biliverse/ADBlock/releases/download/v0.7.3/response.bundle.js",
+    "upstream_sha256": "04100a2075988159b9400ace821c5c6ed4493fba02cd7c03b6f8c5600cf8d855",
+    "output_file": "bili-adblock-fixed-response.js",
+    "output_sha256": "8307cecc335a49ad5103b5fa5adf46efa4000287d0220e4b4af781b4461de057",
+    "output_bytes": 1091180,
+    "upstream_license": "Apache-2.0",
+    "upstream_license_file": "LICENSE.Biliverse.ADBlock.txt",
+    "changes": [
+      {
+        "anchor": "const{Settings:a,Caches:r,Configs:o}=mr(e,n,i);return t.info(\"typeof Settings: \"",
+        "replacement": "const{Settings:a,Caches:r,Configs:o}=mr(e,n,i);a.Splash=!0,a.View={...a.View,AD:!0};return t.info(\"typeof Settings: \"",
+        "occurrences": 1
+      }
+    ],
+    "forced_settings": {
+      "Splash": true,
+      "View.AD": true
+    },
+    "preserves_other_stored_settings": true,
+    "writes_persistent_storage": false,
+    "global_argument_overridden": false,
+    "note": "Pinned upstream bundle with one settings merge patch and attribution header. No changes to account entitlements, mode flags, or request logic."
+  },
+  "hostnames": [
+    "app.bilibili.com",
+    "app.biliapi.net",
+    "app.biliapi.com",
+    "grpc.biliapi.net",
+    "api.bilibili.com",
+    "api.biliapi.net",
+    "api.live.bilibili.com",
+    "api.vc.bilibili.com",
+    "manga.bilibili.com",
+    "cm.bilibili.com",
+    "adtrack.qianwen.com",
+    "tkio-redirect.solar-engine.com"
+  ],
+  "checks": {
+    "response_vm": {
+      "passed": 13,
+      "total": 13
+    },
+    "icu_patterns": 20,
+    "url_match_fixtures": {
+      "passed": 314,
+      "total": 314
+    },
+    "mall_jq": {
+      "passed": 6,
+      "total": 6
+    },
+    "node_syntax": true,
+    "patch_reversible_to_original_sha256": true
+  },
+  "not_phone_tested": true,
+  "integration_notes": "INTEGRATION.md",
+  "files": {
+    "candidate-bili19.snippet": {
+      "bytes": 4598,
+      "sha256": "76c847be3ed6fa7cdda76ba373303c10984973cb2befb7689941b6b41d0c7068"
+    },
+    "candidate-rules.json": {
+      "bytes": 24745,
+      "sha256": "218edfd69acafd756bfafad6f50c5b66bbbc7e66119c997224a43fd9aa399faa"
+    },
+    "membership-bottom-rule.snippet": {
+      "bytes": 778,
+      "sha256": "e922e9059c88dd4e81f0e980fccdeb06c02b0db8bc65482034c6f37381bf1dcb"
+    },
+    "bili-adblock-fixed-response.js": {
+      "bytes": 1091180,
+      "sha256": "8307cecc335a49ad5103b5fa5adf46efa4000287d0220e4b4af781b4461de057"
+    },
+    "LICENSE.Biliverse.ADBlock.txt": {
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "response-patch-manifest.json": {
+      "bytes": 1094,
+      "sha256": "8882676b929ac89dfc0bb70eced03260fc7f0817fa2fa4c0ffdc4af8185716cf"
+    }
+  }
+}

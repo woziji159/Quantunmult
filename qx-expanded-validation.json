@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-10",
+  "iphone_tested": false,
+  "icu": {
+    "engine": "Foundation/ICU",
+    "failures": [],
+    "rules_checked": 1686
+  },
+  "jq_count": 32,
+  "bili": {
+    "response_vm": {
+      "passed": 13,
+      "total": 13
+    },
+    "icu_patterns": 20,
+    "url_match_fixtures": {
+      "passed": 314,
+      "total": 314
+    },
+    "mall_jq": {
+      "passed": 6,
+      "total": 6
+    },
+    "node_syntax": true,
+    "patch_reversible_to_original_sha256": true
+  },
+  "baidu": {
+    "passed": 9,
+    "scope": "Synthetic HTML and QX VM; no iPhone or current Baidu DOM test",
+    "injected_style_hash": "5hqzV2jGVxkXnvEQlL9+XoZfbmQnADb0xnE50I26Cm8="
+  },
+  "specific_apps": {
+    "count": 15,
+    "passed": 15,
+    "notes": "Synthetic fixtures only; no iPhone traffic tested.",
+    "results": [
+      {
+        "name": "Kugou clears all four splash-ad arrays, preserves account/audio and unknown config",
+        "passed": true
+      },
+      {
+        "name": "Kugou banner clears only ads",
+        "passed": true
+      },
+      {
+        "name": "Kugou fails open: <html>challenge</html>",
+        "passed": true
+      },
+      {
+        "name": "Kugou fails open: {}",
+        "passed": true
+      },
+      {
+        "name": "Kugou fails open: null",
+        "passed": true
+      },
+      {
+        "name": "Kugou fails open: {\"data\":[]}",
+        "passed": true
+      },
+      {
+        "name": "Kugou fails open: {\"data\":{\"songs\":[1]}}",
+        "passed": true
+      },
+      {
+        "name": "Kugou excludes suffix and ordinary playback URL",
+        "passed": true
+      },
+      {
+        "name": "X removes direct promoted entries; preserves tweets and cursors",
+        "passed": true
+      },
+      {
+        "name": "X detail removes nested ads without removing organic replies",
+        "passed": true
+      },
+      {
+        "name": "X fails open: <html>challenge</html>",
+        "passed": true
+      },
+      {
+        "name": "X fails open: {}",
+        "passed": true
+      },
+      {
+        "name": "X fails open: null",
+        "passed": true
+      },
+      {
+        "name": "X fails open: {\"data\":{\"home\":{\"home_timeline_urt\":{\"instructions\":{}}}}}",
+        "passed": true
+      },
+      {
+        "name": "X module excludes native API host and unrelated graph operation",
+        "passed": true
+      }
+    ]
+  },
+  "main_changed_sections": [
+    "filter_remote",
+    "rewrite_remote",
+    "filter_local (one Kugou ad host)"
+  ],
+  "policy_server_dns_mitm_rewrite_local_unchanged": true,
+  "published_script_sha256": {
+    "bili-adblock-fixed-response.js": "8307cecc335a49ad5103b5fa5adf46efa4000287d0220e4b4af781b4461de057",
+    "qx-kugou-clean.js": "adcb7794fa3d6bc609dbafc05a008c94ab450507c52da12d8aa9115f02725dc4",
+    "qx-x-web-ads.js": "3fc572acc299ff9f8df1c14ec7d6e8cccb4a202858ab2c2e237d941d3c438bc6",
+    "qx-baidu-clean.js": "c749e1ff1913aae0013aa6c3f2a6da6ca282f417988b73bd742174aa6e312a00"
+  },
+  "dns": {
+    "tests_run": 22,
+    "failures": 0,
+    "errors": 0,
+    "success": true,
+    "output_rules": 31258,
+    "source_candidates_accounted": 227041,
+    "scope": "Static format, exception safety, protected routes, provenance and known dedup regression; not iPhone runtime or all-app ad removal."
+  }
+}

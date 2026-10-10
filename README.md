@@ -1,43 +1,69 @@
 # Quantunmult · iPhone 圈 X 配置
 
-完整配置：[quantumultx.conf](https://raw.githubusercontent.com/woziji159/Quantunmult/main/quantumultx.conf)。请在完整配置下载入口使用，不要当作节点订阅导入。
+[完整配置 quantumultx.conf](https://raw.githubusercontent.com/woziji159/Quantunmult/main/quantumultx.conf)。用于圈 X 的完整配置入口，不是节点订阅。
 
-## 2026-10-10 广告资源更新
+## 2026-10-10 多源广告与截图问题补充
 
-- [应用广告综合重写](qx-rewrite-app-ads.conf)：1,559条原生圈X重写，537个有URL规则的应用/服务栏目，合并综合集合和B站、YouTube、高德、酷安规则。来源是[奶思/fmz200](https://github.com/fmz200/wool_scripts)、[ddgksf2013](https://github.com/ddgksf2013/Rewrite)与[Biliverse](https://github.com/Biliverse/ADBlock)。
-- fmz200当前文件最后提交为2026-09-10；2026-10-10是查验与整理日期。上游宣传约730应用/小程序包含仅域名分流栏目；本文件的537栏目是实际保留URL重写的栏目数，不等于537款应用已实测。
-- B站更新至[v0.7.3（2026-10-08）](https://github.com/Biliverse/ADBlock/releases/tag/v0.7.3)。保留去广告和搜索/话题净化；移除设置面板、青少年模式、弹幕/水印及最常访问列表相关处理。B站官方脚本可受手机原有BoxJS设置影响。
-- [AdGuard广告补充](qx-adguard-dns.list)：来自官方DNS过滤器，源更新时间北京时间2026-10-10 06:15。追加8,922条原有分流尚未覆盖的兼容域名后缀规则；审计全部211条例外，并避开苹果服务及已有本地策略。不是AdGuard整套网页过滤器，不能直接使用CSS隐藏元素、脚本注入或复杂Adblock语法。
-- 旧的两份大合集和两份YouTube重复资源退出新主配置，旧B站失效脚本不再引用。综合源重复规则在构建时明确择一，补齐28个遗漏主机，JSONJQ表达式语法检查通过。明确的会员修改、升级检查和微信链接安全限制解除未纳入新广告集合。
-- 保留原来迅雷资源和本地搜索增强；节点、地区候选、苹果直连/邮箱代理、iOS更新开关、漏网之鱼、本地网站规则不改。
+这次是在已有分流和应用广告综合重写上补漏，并非声称所有 App、所有广告都已去除。规则均为本次取得的公开快照；是否适配手机当前 App 仍需实测。
 
-### 在已有手机配置上更新
+| 项目 | 本次实际处理 | 边界 |
+|---|---|---|
+| AdGuard／类似18bit的多源DNS广告过滤 | 合并当前 AdGuard DNS、anti-AD、Cats-Team AdRules，生成31,258条补充，分2份。修复按旧关键词去重造成的漏拦 | 依赖原15份基础分流；不是独立完整AdGuard，也不是完整Adblock网页语法 |
+| 关圣、18bit | 已核实其公开来源和可下载内容 | 关圣公开完整黑名单404；18bit自有清单未公开，不能声称复制了两者的完整服务 |
+| B站视频下方广告／开屏 | 保留最新公开Biliverse ADBlock v0.7.3；修正域名、查询参数匹配；强制启用Splash和View.AD，避免旧偏好关掉这两项 | 其他BoxJS偏好保留，不写持久化；需请求经过MitM，缓存广告需重新拉取 |
+| B站会员购 | 删除导航接口返回的会员购底栏并重新排列保留项 | 只删除入口，不清空商城数据，不改变会员账号 |
+| 酷狗开屏 | 新增普通版开屏、广告横幅JSON清理及概念版窄规则；补广告素材域名 | 来源部分接口较旧，未声称已实测最新版；酷我与酷狗不是同一App |
+| Safari百度底部横条 | 独立使用AdGuard的11个页面CSS选择器，隐藏已知“打开App”推广容器及广告容器 | 仅www/m.baidu.com页面；保留Safari地址栏。百度改版可能需继续适配 |
+| 其他网页 | 接入毒奶Adblock4limbo当前公开2026-10-06版，网页资源共122条规则 | 仅所列网站。保留原作者脚本及其工具入口；百度搜索采用独立方案 |
+| X | 添加网页/PWA推广帖过滤，保留普通推文及分页游标 | **没有核实能清除截图中官方X App广告的可靠规则；网页规则不代表App已解决** |
+| 微信／QQ／抖音小程序 | 扩大广告域名覆盖，保留综合集合中已有的具体小程序接口 | 无法保证通用5秒开屏、插屏、激励广告全清；共用业务接口不能整体封域名 |
+| 抖音中间＋ | 未加入猜测规则 | 没有核实到最新版可用的重写接口；它是原生界面入口 |
+| 抖音免广告畅玩权益卡 | 未伪造购买或激活状态 | 屏蔽广告请求不等于获得付费权益；也不保证获得观看广告奖励 |
+| 微信未成年模式＋搜索小程序 | 未修改模式 | 未找到可靠的最新版规则能同时保留无广告效果和搜索能力 |
+| 支付宝主界面净化 | 保留已有具体小程序广告清理 | 没有核实新版支付宝主首页全面净化模块，不能把小程序规则算作主界面已净化 |
 
-手机已有自定义节点和地区候选时，推荐编辑当前配置的资源部分，不整份覆盖：
+### 数据来源和更新时间
 
-1. 重写资源中关闭旧“去广告”“广告屏蔽”“油管去广告”“哔哩哔哩Lite去广告”、外部高德/闲鱼/酷安/YouTube资源，添加下方一个综合重写。迅雷资源可按原设置保留。
-2. 分流资源中添加下方AdGuard补充，关闭资源解析器，开启资源；放在已有远程分流之前，插入资源选项关闭。本地自定义网站规则仍保留。
-3. 更新资源，重写与MitM开关开启；HTTPS重写要求iPhone上的圈X证书已安装并完全信任。仓库不含证书私钥。
+- [AdGuard DNS Filter](https://github.com/AdguardTeam/AdGuardSDNSFilter)：源更新时间2026-10-10 12:18:14（北京时间）。
+- [anti-AD](https://github.com/privacy-protection-tools/anti-AD)：公开规则版本20261008071316。
+- [Cats-Team AdRules](https://github.com/Cats-Team/AdRules)：源更新时间2026-10-10 11:50:55（北京时间）。
+- [18bit来源页](https://go.18bit.cn/pr/dns-ad-list.html)明确使用anti-AD、AdRules，同时含不公开的自有清单；该页面表格统计标注2022-06-10，不当作现在的规则数量。
+- [关圣公开仓库](https://github.com/guandasheng/TheBestAdrules)的完整all.txt当前不可下载，公开add.txt只有一条例外。未宣称使用其会员DNS私有规则。
+- [Biliverse v0.7.3](https://github.com/Biliverse/ADBlock/releases/tag/v0.7.3)、[毒奶网页计划](https://github.com/limbopro/Adblock4limbo)、[X网页规则](https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/XWebAds.snippet)。
+
+原域名集合中193,671个候选由已有、不受其他放行后缀竞争的REJECT覆盖，因此没有重复堆入。新集合审计了490条例外/禁用项，排除潜在白名单冲突、苹果服务、本地自定义策略；不再按旧host-keyword判定“已经拦截”。不支持的正则/修饰符不会错误转换为整站封锁。白名单保护针对新增集合，不重写旧基础库中已有的拦截。
+
+### 在已有iPhone配置里更新
+
+**手机已经有自己的节点、证书、地区候选时，优先只更新资源，避免整份覆盖手动设置。**
+
+1. 在“分流规则→资源”关闭旧`AdGuard广告补充`（qx-adguard-dns.list），添加下面两份`多源广告补充`，放在其他远程分流前面。两份均开启，资源解析器关闭，插入资源关闭，原15份基础分流保留。
+2. 在“重写规则→资源”更新已有`应用广告综合重写`，再添加下面`网页广告净化`。旧B站、旧大合集、重复YouTube资源保持关闭，避免旧规则先命中。
+3. 开启重写、MitM；iPhone上的圈X证书需要安装且完全信任。更新资源与脚本后，退出相关App再重开；B站导航可能要重新获取配置。Safari重新载入页面，必要时只清理百度的网站数据。
+4. 要补酷狗素材域名，在本地分流靠前位置添加`host, adsfileretry.service.kugou.com, reject`。完整主配置已经包含这条。
 
 ```ini
+[filter_remote]
+https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-dns-ads-01.list, tag=多源广告补充1, update-interval=86400, opt-parser=false, inserted-resource=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-dns-ads-02.list, tag=多源广告补充2, update-interval=86400, opt-parser=false, inserted-resource=false, enabled=true
+
 [rewrite_remote]
 https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-rewrite-app-ads.conf, tag=应用广告综合重写, update-interval=86400, opt-parser=false, enabled=true
-
-[filter_remote]
-https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-adguard-dns.list, tag=AdGuard广告补充, update-interval=86400, opt-parser=false, inserted-resource=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-rewrite-web-ads.conf, tag=网页广告净化, update-interval=86400, opt-parser=false, enabled=true
 ```
 
-以上是两段资源示例，不是完整配置；合并到手机对应章节，保留现有其他资源。新的[完整主配置](https://raw.githubusercontent.com/woziji159/Quantunmult/main/quantumultx.conf)也已经接入上述资源，适合需要完整导入时使用。
+上面只是资源示例，不是完整配置。新增资源地址必须添加到手机，单纯刷新旧资源不会自动添加新地址。仓库主配置已接好全部资源，但不会把仓库修改自动推送进手机的本地配置。
 
-### 实际效果与验证
+### 验证与使用边界
 
-1559条正则通过Foundation/ICU语法检查，31个JSONJQ表达式通过语法检查。新综合集合所用75个JS地址本次均HTTP200；AdGuard转换21项独立检查、B站/YouTube/小程序/闲鱼31个静态匹配检查通过。HTTP可达和静态匹配不等于手机App实测。
+应用综合资源1,564条、网页资源122条，合计1,686条正则通过Foundation/ICU检查，32个JSONJQ表达式通过编译检查。百度注入脚本9项、酷狗/X脚本15项模拟响应测试通过；B站另验证JSON/普通及gzip Protobuf、旧设置及导航数据。具体检查见`qx-expanded-validation.json`。
 
-没有能清除所有iOS应用所有广告的通用重写。部分App拒绝MitM；抖音iOS信息流、微信通用5秒开屏/朋友圈、支付宝主App首页不能保证。微信和支付宝的覆盖主要是集合中已有的具体小程序广告接口。规则失效或App异常时先停用对应资源并通过圈X网络活动查看命中请求。
+**这些检查不是你的iPhone实测。** 缺少具体App版本号、失败请求和命中日志时，不能确定截图里每一处广告的实际接口。你说“最新版”，本次按各项目当前公开版本核查；没有宣称每个旧接口已适配所有最新版。
 
-来源、日期和修改记录：[qx-rewrite-sources.json](qx-rewrite-sources.json)、[qx-adguard-sources.json](qx-adguard-sources.json)。GPL版权与许可分别见[fmz200许可证](LICENSE.fmz200.GPL-3.0.txt)、[AdGuard许可证](LICENSE.AdGuard.GPL-3.0.txt)；脚本保留原作者链接，不在本仓库转载。
+如果还有广告：在圈X网络活动里找该广告出现时的请求，查看是否REJECT、是否进入MitM及命中的重写。正常内容和广告共用域名时，DNS只能决定连接，不能删除其中一个界面元素。已经缓存的广告也可能在断网时仍显示。
 
 ## 原有分流设置（保留）
+
 
 - 以用户提供的 `quantumultx_manual_regions_auto_select.conf` 为准。自动选择保留自动测速；香港、台湾、日本、韩国、新加坡、美国保留手动候选组，可在候选编辑页用＋/－增删及拖动排序。每个地区只有一组，没有额外的“香港自动测速”等重复组。
 - “GitHub代码托管”和“GitHub编程助手”合并为 **GitHub**。55条对应分流已同步改为新组名，GitHub Copilot也跟随；微软Copilot仍归微软AI。原有遥测/广告拒绝规则保留。
@@ -71,10 +97,13 @@ host-suffix, greasyfork.org, GitHub
 3. 在GitHub组里选择实际节点；地区候选按自己的需要编辑。地区组默认PROXY/DIRECT，地区名称不会改变节点实际出口。
 4. 手机上编辑好候选和本地规则后再备份。以后覆盖完整配置会覆盖这些手动修改；仅刷新分流/重写资源不会重置本地候选和本地规则。
 
-## 保留内容与验证范围
 
-共 358,653 条去重分流，来源仍是2026-09-28取得的46份快照；本次迁移不是重新抓取全网最新规则。42个策略组均有图标。iOS系统更新仍是DIRECT允许、REJECT屏蔽（默认REJECT）；苹果普通服务直连、苹果邮箱走国外邮箱；漏网之鱼和两项本地搜索增强保留。
+## 保留内容、来源和许可
 
-2026-09-30原有分流静态检查1652项通过。本次未重建15份分流，只追加AdGuard兼容补充，并更换广告重写。资源是仓库快照；定时刷新本仓库不会自动重新合并上游规则。重写引用的上游JS可能另行更新。未在你的iPhone上运行测试。
+原358,653条基础/本地分流和42个策略组仍以原配置为基础；这次不是把全部业务分流重新抓取一遍。除广告资源引用及一条酷狗广告域名，本次没有改变节点、地区候选、苹果普通直连、国外邮箱代理、iOS系统更新DIRECT允许/REJECT屏蔽、漏网之鱼和本地搜索增强。
 
-规则来源及校验值见 [qx-sources.json](qx-sources.json)。图标保留 [Koolson/Qure](https://github.com/Koolson/Qure) 和 [Orz-3/mini](https://github.com/Orz-3/mini) 原地址。
+新资源为仓库快照，86400秒刷新的是本仓库，不是自动重新合并所有上游。部分引用的上游JS可能另行更新。旧qx-adguard-dns.list及其他旧重写文件保留作历史兼容资料，新主配置不启用旧AdGuard补充。
+
+来源与修改记录：[应用重写](qx-rewrite-sources.json)、[多源DNS](qx-dns-ads-sources.json)、[网页](qx-web-sources.json)、[酷狗/X](qx-specific-apps-sources.json)、[B站](qx-bili-sources.json)。
+
+许可分别见fmz200/AdGuard GPL-3.0、Biliverse Apache-2.0、limbopro/anti-AD MIT以及`qx-dns-ads-attribution.md`。新增自有脚本注明修改及来源；未转载禁止转发的脚本。完整配置不包含你的私有节点账号或证书私钥。
