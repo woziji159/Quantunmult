@@ -1,7 +1,7 @@
 {
   "checked_at": "2026-10-11",
   "device_tested": false,
-  "rule_count": 1560,
+  "rule_count": 1561,
   "app_sections_with_rules": 537,
   "upstream_advertised_app_count": 730,
   "upstream_advertised_count_includes_domain_only_sections": true,
@@ -16,7 +16,7 @@
   ],
   "fmz_source_sha256": "45e06775655eebba32a2a816b9c44c5b11175e57ebcd2984d39a7b618a78243d",
   "fmz_source_commit": "3ca7487b4e4b86d9af76e50df72c62eacfbb659e",
-  "resource_sha256": "b8b7e74fe75dcdd03e784df7c14441549141906531d30ebbbb503eacc1849ee8",
+  "resource_sha256": "35d0a07c9f9eaa74342908706052736aee82b71b565f767eaa525a00175b139c",
   "apps": {
     "12123": 1,
     "12306": 1,
@@ -1854,5 +1854,13 @@
     "script": "qx-coolapk-list-20261011.js",
     "no_text_keyword_filter": true,
     "device_tested": false
+  },
+  "kugou_campus_oct11_update": {
+    "device_tested": false,
+    "kugou_script": "qx-kugou-clean-20261011.js",
+    "kugou_source": "https://github.com/AEtso/Loon/blob/master/Scripts/kugou.js",
+    "campus_source": "https://gist.github.com/socalledPF/85bd24a270b6d0ce6d568211cd4b86d7",
+    "campus_scope": "legacy /api/.../ad only; current iOS endpoint unverified",
+    "offline_checks": 21
   }
 }

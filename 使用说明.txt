@@ -1,0 +1,16 @@
+酷狗音乐普通版开屏补漏（试用）
+
+已确认的配置遗漏：原脚本只关闭三项腾讯广告策略，公开维护脚本还包含 fetch_mode、前台预加载间隔、启动预加载间隔等控制项。本次补齐六项并保留未知字段；继续清空 ads / boot_ads / front_ads / retry_ads。没有引入公开脚本中的超长 fetch timeout，避免启动等待风险。
+
+上传本文件夹全部文件到仓库根目录，覆盖同名文件，再在 iPhone 圈 X 更新“应用广告综合重写”。新脚本使用日期文件名，重写资源会指向它。主配置及 Safari 小程序入口无需重复修改。
+
+更新后在酷狗设置中清理缓存（若提供该功能；不要清除已下载歌曲），彻底退出 App 后重新打开。已下载的旧开屏素材可能仍被本地显示；规则不能直接删除 App 的本地文件。若仍有广告，请在圈 X 日志中查看 [Kugou Splash] 是否出现。
+
+这次为公开接口/字段依据的补漏与离线验证，尚无用户 iPhone 的实际响应，因此不保证消除所有开屏。规则仅覆盖已知 adserviceretry.kglink.cn/v4/mobile_splash；未猜测新增接口。
+
+字段依据：https://github.com/AEtso/Loon/blob/master/Scripts/kugou.js
+域名依据：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/split/partK/KuGouMusic.snippet
+
+运动世界校园补充：仅拦截 iydsj.com 子域名下 /api/.../ad 广告路径；添加对应 MitM 主机名。保留登录、跑步与地址路径。此公开规则年代较早，当前 iOS 接口仍需实测；不能承诺涵盖第三方广告 SDK。来源：https://gist.github.com/socalledPF/85bd24a270b6d0ce6d568211cd4b86d7
+
+核对之前已上传资源，酷安更新只改动酷安列表重写，没有删掉运动世界校园规则。因此“以前拦住、现在又出现”的实际原因仍未定位，不能直接归因于这次配置更新。
