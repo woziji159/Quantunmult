@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "snapshot_date": "2026-10-10",
-  "kind": "Native Quantumult X supplemental host-suffix rules; depends on the existing 15 rule resources.",
+  "kind": "Native Quantumult X supplemental host and host-suffix rules; depends on the existing 15 rule resources.",
   "sources": {
     "adguard": {
       "file": "adguard-dns.txt",
@@ -55,7 +55,9 @@
     "covered_by_safe_collection_parent": 290,
     "unique_supported_source_domains": 227041,
     "output_suffix_rules": 31258,
-    "old_baseline_keywords_used_for_deduplication": 0
+    "old_baseline_keywords_used_for_deduplication": 0,
+    "output_exact_host_rules": 1,
+    "output_total_rules": 31259
   },
   "exception_count": 490,
   "exception_kind_counts": {
@@ -72,9 +74,9 @@
   "outputs": [
     {
       "file": "qx-dns-ads-01.list",
-      "rule_count": 22073,
-      "bytes": 900022,
-      "sha256": "c6081ef962392385db91d7e3579bb18cc3805f42ccc6903b37ccaf203d35d2bd"
+      "rule_count": 22074,
+      "bytes": 900156,
+      "sha256": "431da0a385c642f3db7fa58746fda7c45898edeff8406c6f89a7f861bd22e7b8"
     },
     {
       "file": "qx-dns-ads-02.list",
@@ -140,5 +142,18 @@
     "LICENSE.GuanSheng.MIT.txt",
     "AdRules-UPSTREAM-SOURCES.md",
     "qx-dns-ads-attribution.md"
-  ]
+  ],
+  "targeted_patch_20261011": {
+    "added_rule": "host, sdk.tianmu.mobi, reject",
+    "reason": "User iPhone campus splash reproduction showed sdk.tianmu.mobi passing IP-CIDR DIRECT with received data; existing lists only blocked tracker.tianmu.mobi.",
+    "sources": [
+      "https://raw.githubusercontent.com/ZeroM26/Loon.JS/main/BlockAdvertisers.plugin",
+      "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/AdvertisingLite/AdvertisingLite.conf",
+      "https://github.com/ADSuyi/ADSuyiSDKDemo-iOS"
+    ],
+    "upstream_snapshots_refreshed": false,
+    "validation": "Original 22073 rules unchanged; one exact host rule added; native line format verified.",
+    "device_tested_after_patch": false,
+    "scope": "Shared ad SDK host; not restricted to a single app. No changes to iyDSJ business hosts, running data, main config or rewrite resources."
+  }
 }

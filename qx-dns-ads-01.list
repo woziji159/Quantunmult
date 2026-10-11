@@ -4,10 +4,12 @@
 # AdGuard GPL-3.0; anti-AD MIT (gently); AdRules outputs inherit upstream licenses (not the merge tool 0BSD license).
 # All supported runtime exceptions, build allowlists and badfilter families considered across sources.
 # Apple and active local user policies protected. Existing host-keyword rules do not justify removing candidates.
-# Contains only supported host-suffix domain blocks; excludes unsupported masks, regex, IP and modifiers.
+# Contains supported host and host-suffix domain blocks; excludes unsupported masks, regex, IP and modifiers.
 # Static snapshot, not an export of private 18bit/Guan Sheng server rule databases.
 # Import all parts before broad existing remote routing rules; preserve filter_local priority.
-# Part 1/2; rules 22073
+# Part 1/2; rules 22074
+# Local patch 2026-10-11: Tianmu ad SDK host observed passing DIRECT in campus splash reproduction.
+host, sdk.tianmu.mobi, reject
 host-suffix, 000123456789.online, reject
 host-suffix, 000123456789.site, reject
 host-suffix, 0036abb78a.0c3ff350ec.com, reject

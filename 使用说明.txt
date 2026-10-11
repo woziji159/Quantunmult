@@ -1,16 +1,31 @@
-酷狗音乐普通版开屏补漏（试用）
+运动世界校园开屏：天目广告接口补漏（2026-10-11）
 
-已确认的配置遗漏：原脚本只关闭三项腾讯广告策略，公开维护脚本还包含 fetch_mode、前台预加载间隔、启动预加载间隔等控制项。本次补齐六项并保留未知字段；继续清空 ads / boot_ads / front_ads / retry_ads。没有引入公开脚本中的超长 fetch timeout，避免启动等待风险。
+需要上传覆盖仓库根目录的文件：
+1. qx-dns-ads-01.list（实际规则）
+2. qx-dns-ads-sources.json（来源及校验信息）
 
-上传本文件夹全部文件到仓库根目录，覆盖同名文件，再在 iPhone 圈 X 更新“应用广告综合重写”。新脚本使用日期文件名，重写资源会指向它。主配置及 Safari 小程序入口无需重复修改。
+上传后在 iPhone 圈 X 的「分流规则 → 引用资源」更新「多源广告补充1」。
+这是分流文件，不要添加到重写资源。原订阅地址、主配置和现有重写均无需更换。
+从后台退出运动世界校园后重新打开；出现广告时不要点击。
 
-更新后在酷狗设置中清理缓存（若提供该功能；不要清除已下载歌曲），彻底退出 App 后重新打开。已下载的旧开屏素材可能仍被本地显示；规则不能直接删除 App 的本地文件。若仍有广告，请在圈 X 日志中查看 [Kugou Splash] 是否出现。
+本次只新增：
+host, sdk.tianmu.mobi, reject
 
-这次为公开接口/字段依据的补漏与离线验证，尚无用户 iPhone 的实际响应，因此不保证消除所有开屏。规则仅覆盖已知 adserviceretry.kglink.cn/v4/mobile_splash；未猜测新增接口。
+如需马上在手机测试，也可以把上面这一行放进配置的 [filter_local] 开头。
+或者在网络活动点开 sdk.tianmu.mobi 那条，通过右上角漏斗新增分流：类型 host、内容 sdk.tianmu.mobi、策略 reject。
+这是同一条规则的本地用法，不必与资源版重复添加。
 
-字段依据：https://github.com/AEtso/Loon/blob/master/Scripts/kugou.js
-域名依据：https://github.com/fmz200/wool_scripts/blob/main/QuantumultX/rewrite/split/partK/KuGouMusic.snippet
+事实依据：
+用户截图中，部分 datapoint.gxapp.iydsj.com 请求已经显示 REWRITE / REJECT-200；说明有重写拦截实际发生。
+sdk.tianmu.mobi 请求却命中 IP-CIDR 114.224.0.0/11 DIRECT，并收到了数据。
+公开规则将 sdk.tianmu.mobi 列为天目广告 SDK 主机；之前的分流只覆盖 tracker.tianmu.mobi，没有覆盖 sdk 主机。
 
-运动世界校园补充：仅拦截 iydsj.com 子域名下 /api/.../ad 广告路径；添加对应 MitM 主机名。保留登录、跑步与地址路径。此公开规则年代较早，当前 iOS 接口仍需实测；不能承诺涵盖第三方广告 SDK。来源：https://gist.github.com/socalledPF/85bd24a270b6d0ce6d568211cd4b86d7
+本次保留原 22073 条分流，新增一条精确 host 规则；没有整域封禁 iyDSj.com，也没有修改美团、苹果、邮箱、系统更新或 Safari 搜索规则。
+该广告 SDK 也可能被其他 App 使用；此规则会拦截同一主机在其他 App 中的请求。
+静态检查已通过。当前截图没有完整广告响应，因此不能断言所有开屏均来自此接口，也未在手机上验证本次修改后的效果。
+若出现业务异常，删除这条本地规则或还原列表即可。无需卸载 App 或清除跑步数据。
 
-核对之前已上传资源，酷安更新只改动酷安列表重写，没有删掉运动世界校园规则。因此“以前拦住、现在又出现”的实际原因仍未定位，不能直接归因于这次配置更新。
+参考：
+https://raw.githubusercontent.com/ZeroM26/Loon.JS/main/BlockAdvertisers.plugin
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/AdvertisingLite/AdvertisingLite.conf
+https://github.com/ADSuyi/ADSuyiSDKDemo-iOS
