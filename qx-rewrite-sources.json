@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-10",
+  "checked_at": "2026-10-11",
   "device_tested": false,
-  "rule_count": 1564,
+  "rule_count": 1560,
   "app_sections_with_rules": 537,
   "upstream_advertised_app_count": 730,
   "upstream_advertised_count_includes_domain_only_sections": true,
   "hostname_count": 1005,
-  "script_url_count": 78,
+  "script_url_count": 79,
   "source_urls": [
     "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/rewrite.snippet",
     "https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/AmapAds.conf",
@@ -16,7 +16,7 @@
   ],
   "fmz_source_sha256": "45e06775655eebba32a2a816b9c44c5b11175e57ebcd2984d39a7b618a78243d",
   "fmz_source_commit": "3ca7487b4e4b86d9af76e50df72c62eacfbb659e",
-  "resource_sha256": "9b0a980a770f7385b64e828564e33111a64b217564ef6570243fd8e10ca7f6bf",
+  "resource_sha256": "b8b7e74fe75dcdd03e784df7c14441549141906531d30ebbbb503eacc1849ee8",
   "apps": {
     "12123": 1,
     "12306": 1,
@@ -553,7 +553,7 @@
     "作业帮": 1,
     "高德地图": 17,
     "YouTube": 6,
-    "酷安": 7,
+    "酷安": 6,
     "哔哩哔哩": 19
   },
   "scripts": [
@@ -617,6 +617,7 @@
     "https://raw.githubusercontent.com/kokoryh/Script/master/js/12306.js",
     "https://raw.githubusercontent.com/woziji159/Quantunmult/main/bili-adblock-response-20261011.js",
     "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-bili-navigation.js",
+    "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-coolapk-list-20261011.js",
     "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-kugou-clean.js",
     "https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-x-web-ads.js",
     "https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js",
@@ -1805,6 +1806,11 @@
         "app": "书旗小说"
       },
       "reason": "保留上游先列规则；滴滴保留响应去广告而非整接口拒绝，快手保留第一条界面处理"
+    },
+    {
+      "origin": "coolapk 2026-10-11 local patch",
+      "change": "replace two dataList handlers with one source-backed custom handler covering all three known dataList paths; preserve other Coolapk endpoints",
+      "test_report": "qx-coolapk-validation.json"
     }
   ],
   "limitations": [
@@ -1835,5 +1841,18 @@
     "video_ad_fix_confirmed": false,
     "native_x_app_supported": false,
     "douyin_experiment": "separate resource, disabled by default in full profile"
+  },
+  "coolapk_oct11_update": {
+    "source_manifest": "qx-coolapk-validation.json",
+    "changed_endpoints": [
+      "/v6/dataList",
+      "/v6/main/dataList",
+      "/v6/page/dataList"
+    ],
+    "old_page_title_requirement_removed": "title=%E9%85",
+    "filter": "top-level data[] objects with exact entityTemplate=sponsorCard",
+    "script": "qx-coolapk-list-20261011.js",
+    "no_text_keyword_filter": true,
+    "device_tested": false
   }
 }

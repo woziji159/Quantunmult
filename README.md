@@ -2,6 +2,14 @@
 
 [完整配置 quantumultx.conf](https://raw.githubusercontent.com/woziji159/Quantunmult/main/quantumultx.conf)。用于圈 X 的完整配置入口，不是节点订阅。
 
+## 2026-10-11 酷安讨论列表广告补漏
+
+补全酷安 `/v6/main/dataList` 和普通 `/v6/page/dataList` 的匹配；旧配置只处理标题以“酷”开头的 page 列表。三种 dataList 入口统一使用自写 `qx-coolapk-list-20261011.js`，仅删除公开源已确认的 `entityTemplate=sponsorCard` 广告卡，保留普通讨论、未知字段和分页。避免旧脚本按“流量”等标题文字误删正常帖子。
+
+已有手机配置只需在“重写规则→资源”更新 **应用广告综合重写**，随后从后台退出酷安、重开并刷新讨论列表；无需重新导入主配置。**35项合成响应测试通过，尚未在用户iPhone验证，截图广告是否属于此卡片仍待实测。** 若还有广告，可继续反馈相同页面截图，不要求必须提供抓包。
+
+[应用广告综合重写](https://raw.githubusercontent.com/woziji159/Quantunmult/main/qx-rewrite-app-ads.conf) · [测试及修改记录](qx-coolapk-validation.json) · [接口和广告字段依据](https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/split/partK/Coolapk.snippet)
+
 ## 2026-10-11 底栏精简和漏广告诊断
 
 **用户已确认重写已更新、MitM和证书信任已完成，但B站视频下及X官方App仍有广告。本轮没有把这两项标成修复。**
@@ -122,3 +130,10 @@ host-suffix, greasyfork.org, GitHub
 来源与修改记录：[应用重写](qx-rewrite-sources.json)、[多源DNS](qx-dns-ads-sources.json)、[网页](qx-web-sources.json)、[酷狗/X](qx-specific-apps-sources.json)、[B站](qx-bili-sources.json)。
 
 许可分别见fmz200/AdGuard GPL-3.0、Biliverse Apache-2.0、limbopro/anti-AD MIT以及`qx-dns-ads-attribution.md`。新增自有脚本注明修改及来源；未转载禁止转发的脚本。完整配置不包含你的私有节点账号或证书私钥。
+
+
+## 2026-10-11 Safari 小程序快捷打开与抖音实验清理
+
+主配置 [rewrite_local] 内置 16 个快捷入口，输入 `x 车来了`、`x 徐州市口腔医院`、`x 瑞幸` 等即可打开提供的启动链接。详细名称、别名和类型见 [Safari 快捷入口说明](README-Safari小程序.md)。沿用用户已在 iPhone 验证成功的完整 URL 匹配，后续查询参数不会拼接到目标地址。淮北市人民医院仅保存公共入口，个人 openId 已移除；国家政务服务平台打开提供的公众号文章。
+
+主配置已移除“抖音旧接口去广告实验”资源引用。酷安补漏仍只过滤 sponsorCard 标记，真实手机广告效果需更新后确认。

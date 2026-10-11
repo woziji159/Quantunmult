@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-11",
+  "device_tested": false,
+  "screenshot_endpoint_confirmed": false,
+  "source_urls": [
+    "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js",
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js",
+    "https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/split/partK/Coolapk.snippet"
+  ],
+  "source_checks": {
+    "coolapk-current.js": {
+      "size": 10789,
+      "sha256": "79b28bcbeb4b7b150a21ed20d7d50d9cee2bb91ff5110e9f34dc3be54b0991e4"
+    },
+    "fmz-coolapk-current.js": {
+      "size": 2473,
+      "sha256": "58002f35b6ed5dbcb277e4571f231cc5491d9cd2d04f72ad9c63d4b35b15c003"
+    }
+  },
+  "changes": {
+    "source_manifest": "qx-coolapk-validation.json",
+    "changed_endpoints": [
+      "/v6/dataList",
+      "/v6/main/dataList",
+      "/v6/page/dataList"
+    ],
+    "old_page_title_requirement_removed": "title=%E9%85",
+    "filter": "top-level data[] objects with exact entityTemplate=sponsorCard",
+    "script": "qx-coolapk-list-20261011.js",
+    "no_text_keyword_filter": true,
+    "device_tested": false
+  },
+  "synthetic_tests": {
+    "total": 35,
+    "failures": 0,
+    "cases": [
+      {
+        "name": "dataList title moonlight串流",
+        "pass": true
+      },
+      {
+        "name": "dataList title %6D%6F%6F%6E%6C%69%67%68%74%E4%B8%B2%E6%B5%81",
+        "pass": true
+      },
+      {
+        "name": "dataList title %E9%85%B7%E5%93%81",
+        "pass": true
+      },
+      {
+        "name": "dataList title null",
+        "pass": true
+      },
+      {
+        "name": "main/dataList title moonlight串流",
+        "pass": true
+      },
+      {
+        "name": "main/dataList title %6D%6F%6F%6E%6C%69%67%68%74%E4%B8%B2%E6%B5%81",
+        "pass": true
+      },
+      {
+        "name": "main/dataList title %E9%85%B7%E5%93%81",
+        "pass": true
+      },
+      {
+        "name": "main/dataList title null",
+        "pass": true
+      },
+      {
+        "name": "page/dataList title moonlight串流",
+        "pass": true
+      },
+      {
+        "name": "page/dataList title %6D%6F%6F%6E%6C%69%67%68%74%E4%B8%B2%E6%B5%81",
+        "pass": true
+      },
+      {
+        "name": "page/dataList title %E9%85%B7%E5%93%81",
+        "pass": true
+      },
+      {
+        "name": "page/dataList title null",
+        "pass": true
+      },
+      {
+        "name": "multiple and all ads",
+        "pass": true
+      },
+      {
+        "name": "http supported",
+        "pass": true
+      },
+      {
+        "name": "valid no ads",
+        "pass": true
+      },
+      {
+        "name": "empty list",
+        "pass": true
+      },
+      {
+        "name": "bad JSON",
+        "pass": true
+      },
+      {
+        "name": "empty string",
+        "pass": true
+      },
+      {
+        "name": "null response",
+        "pass": true
+      },
+      {
+        "name": "top array",
+        "pass": true
+      },
+      {
+        "name": "data object",
+        "pass": true
+      },
+      {
+        "name": "missing data",
+        "pass": true
+      },
+      {
+        "name": "data null",
+        "pass": true
+      },
+      {
+        "name": "body absent",
+        "pass": true
+      },
+      {
+        "name": "body number",
+        "pass": true
+      },
+      {
+        "name": "wrong host",
+        "pass": true
+      },
+      {
+        "name": "subdomain",
+        "pass": true
+      },
+      {
+        "name": "v5 excluded",
+        "pass": true
+      },
+      {
+        "name": "suffix endpoint",
+        "pass": true
+      },
+      {
+        "name": "nested endpoint",
+        "pass": true
+      },
+      {
+        "name": "init not touched",
+        "pass": true
+      },
+      {
+        "name": "index not touched",
+        "pass": true
+      },
+      {
+        "name": "detail not touched",
+        "pass": true
+      },
+      {
+        "name": "reply not touched",
+        "pass": true
+      },
+      {
+        "name": "url absent",
+        "pass": true
+      }
+    ]
+  },
+  "resource_rule_count": 1560,
+  "script_sha256": "8809e91619bf33e7626b4a36e8e6607621083ff196210ddbed03b7aed143706f",
+  "resource_sha256": "b8b7e74fe75dcdd03e784df7c14441549141906531d30ebbbb503eacc1849ee8",
+  "limitations": [
+    "Screenshot does not establish its real endpoint or JSON schema.",
+    "Only exact sponsorCard entries at data[] are removed; no guessed field, arbitrary nested scan or SDK ad bypass."
+  ],
+  "integration_tests": {
+    "engine": "Foundation/ICU",
+    "total": 21,
+    "failures": 0,
+    "compiled_response_patterns": 277,
+    "scope": "published app/web/thunder response scripts plus disabled Douyin resource; main local has no Coolapk rewrite"
+  }
+}
