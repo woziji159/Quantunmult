@@ -1,0 +1,22 @@
+[rewrite_remote]
+# 2026-10-12：功能规则及核心脚本已迁入本仓库；本列表启用。监控/定时任务按用户要求暂不添加。
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-boxjs.conf, tag=BoxJS设置, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-bili-enhanced.conf, tag=B站界面增强, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-bili-global.conf, tag=B站跨区增强, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-bili-adblock.conf, tag=B站广告净化, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-apple-weather.conf, tag=苹果天气增强, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-apple-maps.conf, tag=苹果地图增强, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-apple-location.conf, tag=苹果定位服务增强, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-youtube.conf, tag=YouTube增强与双语字幕, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-subs-spotify.conf, tag=Spotify双语歌词, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-subs-netflix.conf, tag=Netflix字幕兼容模式, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-subs-universal.conf, tag=通用双语字幕, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-google.conf, tag=Google搜索增强, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-web-douban.conf, tag=豆瓣网页增强, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-zhihu.conf, tag=知乎网页助手, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/ext-pdd-clean.conf, tag=拼多多页面净化, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/qx-price-compare.conf, tag=京东淘宝比价, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/qx-rewrite-wechat-unblock.conf, tag=微信内链接跳转, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/qx-rewrite-web-ads-extended.conf, tag=网页广告净化, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/qx-rewrite-app-ads-extended.conf, tag=应用广告综合重写, update-interval=86400, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/woziji159/Quantunmult/refs/heads/main/qx-rewrite-thunder.conf, tag=迅雷会员, update-interval=86400, opt-parser=true, enabled=true

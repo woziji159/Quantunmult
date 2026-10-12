@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-12",
+  "license": "Apache-2.0",
+  "upstreamRuntime": "QX adapter present; upstream only guarantees Surge testing",
+  "files": [
+    {
+      "file": "ext-youtube-response.js",
+      "source": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js",
+      "sha256": "f98483d5f5017514f82502253c0db5ce2d4ffb7839887aa2cadc22666f5a7f12"
+    },
+    {
+      "file": "ext-youtube-request.js",
+      "source": "https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js",
+      "sha256": "3ecca15e06e76a31720092c581180f648ef2c45e494644941ba985c878efbb26"
+    },
+    {
+      "file": "ext-youtube-LICENSE.txt",
+      "source": "https://raw.githubusercontent.com/Maasea/sgmodule/master/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ],
+  "integrated_date": "2026-10-12",
+  "device_tested": false
+}

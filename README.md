@@ -2,6 +2,14 @@
 
 [完整配置 quantumultx.conf](https://raw.githubusercontent.com/woziji159/Quantunmult/main/quantumultx.conf)。用于圈 X 的完整配置入口，不是节点订阅。
 
+## 2026-10-12 扩展功能已接入本仓库
+
+B站增强、苹果天气/地图/定位、YouTube增强与双语字幕、Spotify/Netflix/通用字幕、Google搜索、网页工具箱、豆瓣、知乎、拼多多及BoxJS现已接入；主配置中的重写资源默认启用。监控和定时任务按用户要求暂不处理。
+
+**已有手机请先看 [更新步骤和设置入口](README-扩展功能-20261012.md)，替换其中给出的 `[rewrite_remote]` 段后全部更新资源。** 只刷新旧资源不会新增这些功能。保留手机自己的节点和证书。配置及模拟响应检查已通过，尚未完成iPhone实测。
+
+下文是历史记录；当前启用状态及更新方式以上方2026-10-12说明为准。
+
 ## 2026-10-11 酷安讨论列表广告补漏
 
 补全酷安 `/v6/main/dataList` 和普通 `/v6/page/dataList` 的匹配；旧配置只处理标题以“酷”开头的 page 列表。三种 dataList 入口统一使用自写 `qx-coolapk-list-20261011.js`，仅删除公开源已确认的 `entityTemplate=sponsorCard` 广告卡，保留普通讨论、未知字段和分页。避免旧脚本按“流量”等标题文字误删正常帖子。

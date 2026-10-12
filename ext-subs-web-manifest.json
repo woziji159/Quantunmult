@@ -1,0 +1,279 @@
+{
+  "verified_date": "2026-10-12",
+  "device_tested": false,
+  "files": [
+    {
+      "file": "ext-subs-netflix-dualsubs.netflix.preferencepanes.json",
+      "source": "https://github.com/DualSubs/Netflix/releases/download/v0.6.0/DualSubs.Netflix.PreferencePanes.json",
+      "bytes": 3010,
+      "sha256": "ac0bd6d67018d4f797cae29eec00b551ec91da721aac2e3201552466c1f34350",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-spotify-dualsubs.spotify.preferencepanes.json",
+      "source": "https://github.com/DualSubs/Spotify/releases/download/v1.10.0/DualSubs.Spotify.PreferencePanes.json",
+      "bytes": 2955,
+      "sha256": "dc4ca78b63eeee0dff388dc4236e756fec250fdcf1ca3bb5959e37229d4a54af",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-spotify-request.js",
+      "source": "https://github.com/DualSubs/Spotify/releases/download/v1.10.0/request.bundle.js",
+      "bytes": 21459,
+      "sha256": "7d6fe1e1f874dc48be822ed8393eaf436a2b69ea19bba19b979eb69139d1acd6",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-spotify-response.js",
+      "source": "https://github.com/DualSubs/Spotify/releases/download/v1.10.0/response.bundle.js",
+      "bytes": 83631,
+      "sha256": "cc8157b23a8253f7da712c32b8064a7036b394b0f94c80a6cd8d5d1f88e9f6b4",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-composite.subtitles.response.js",
+      "source": "https://github.com/DualSubs/Universal/releases/download/v1.8.0/Composite.Subtitles.response.bundle.js",
+      "bytes": 64939,
+      "sha256": "b55f00cf989c87ef8a5d02bef3a6238b399904ddf5142403c27c77eaeaaf91d9",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-dualsubs.api.translate.preferencepanes.json",
+      "source": "https://github.com/DualSubs/Universal/releases/download/v1.8.0/DualSubs.API.Translate.PreferencePanes.json",
+      "bytes": 2912,
+      "sha256": "12c8b7f3b81142a0c4b67d4540caf9c835535ef68d0c5df46630a1bde95552b9",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-dualsubs.composite.preferencepanes.json",
+      "source": "https://github.com/DualSubs/Universal/releases/download/v1.8.0/DualSubs.Composite.PreferencePanes.json",
+      "bytes": 1643,
+      "sha256": "260900955eba8d2e4493fd14f479a8e2a5d7976fc00d5688ddee8020ec2444c0",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-dualsubs.external.preferencepanes.json",
+      "source": "https://github.com/DualSubs/Universal/releases/download/v1.8.0/DualSubs.External.PreferencePanes.json",
+      "bytes": 1145,
+      "sha256": "4ab7a492e3b8f7b474102ea635d84ff2be9a6c28fc62916cbe9ec71d6224a319",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-dualsubs.translate.preferencepanes.json",
+      "source": "https://github.com/DualSubs/Universal/releases/download/v1.8.0/DualSubs.Translate.PreferencePanes.json",
+      "bytes": 2475,
+      "sha256": "72dd406b2adf55aeb19a396876ec993d0690617cefb166dacc9799ef01493618",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-dualsubs.universal.preferencepanes.json",
+      "source": "https://github.com/DualSubs/Universal/releases/download/v1.8.0/DualSubs.Universal.PreferencePanes.json",
+      "bytes": 3139,
+      "sha256": "a0d6c95f7b76c2a03c8eb215238bc99f91548fff758ae8b67efd9c352b59177c",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-external.lyrics.response.js",
+      "source": "https://github.com/DualSubs/Universal/releases/download/v1.8.0/External.Lyrics.response.bundle.js",
+      "bytes": 99867,
+      "sha256": "dfab1285dbb584a8f3fb962a28eda6bb7bf6bba02ac6bfc0182297138883f992",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-manifest.response.js",
+      "source": "https://github.com/DualSubs/Universal/releases/download/v1.8.0/Manifest.response.bundle.js",
+      "bytes": 58963,
+      "sha256": "6576c4197522c02afcca5c79d93da36d85c7458807777917a200f4e55bd014b0",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-translate.response.js",
+      "source": "https://github.com/DualSubs/Universal/releases/download/v1.8.0/Translate.response.bundle.js",
+      "bytes": 125119,
+      "sha256": "65db19d5a6d7bb5da5566f8fb1026b07e5b88df10fa099b320d8de8ec0d34579",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-youtube-dualsubs.youtube.preferencepanes.json",
+      "source": "https://github.com/DualSubs/YouTube/releases/download/v1.6.0/DualSubs.YouTube.PreferencePanes.json",
+      "bytes": 1953,
+      "sha256": "f0fd4167c7c9f23efdf189a30674f02daf29ba085a7afce2d74ea244b1780967",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-youtube-request.js",
+      "source": "https://github.com/DualSubs/YouTube/releases/download/v1.6.0/request.bundle.js",
+      "bytes": 76666,
+      "sha256": "8d815b6bbacdab4e7552a0b3b2266b57ae680da0eea8b379a03335009c323210",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-youtube-response.js",
+      "source": "https://github.com/DualSubs/YouTube/releases/download/v1.6.0/response.bundle.js",
+      "bytes": 71255,
+      "sha256": "63aea8c4fd62bbaf80a9b91e760ed28b18ebc0003fd9ef6f8e1bbd17ae95467b",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-preference-api.js",
+      "source": "https://github.com/NSNanoCat/PreferencePanes/releases/download/v1.3.1/api.js",
+      "bytes": 56479,
+      "sha256": "2892d3dbc2544207faf73a6f46f11b6247d6f0ac994a79a6159a993eb57db13e",
+      "notes": ""
+    },
+    {
+      "file": "ext-boxjs.js",
+      "source": "https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js",
+      "bytes": 52455,
+      "sha256": "c4df2cb0eb7da3a2850122345673f4edfc38fb070714ff1eca4a8aa5cd258056",
+      "notes": "frontend and release data remapped to own repository"
+    },
+    {
+      "file": "ext-web-google-endless.js",
+      "source": "https://raw.githubusercontent.com/ddgksf2013/Scripts/master/endlessgoogle.js",
+      "bytes": 4498,
+      "sha256": "1ec5f22a913832d1229384b2c8ae048946e2cbcd12880c342b38b92fdbce5b45",
+      "notes": ""
+    },
+    {
+      "file": "ext-web-douban.js",
+      "source": "https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/douban.js",
+      "bytes": 51247,
+      "sha256": "ee2de7bbbf4cd8aee45956f8ddda2945db8fd5d7377934be9497c6138ed5d583",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-youtube.conf",
+      "source": "https://github.com/DualSubs/YouTube/releases/latest/download/DualSubs.YouTube.snippet",
+      "bytes": 4227,
+      "sha256": "6f59b77d0d79ac28548bca0408f1359a5605972d3081930218151267a2a7e9cd",
+      "notes": "upstream URL dependencies remapped to own repository"
+    },
+    {
+      "file": "ext-subs-spotify.conf",
+      "source": "https://github.com/DualSubs/Spotify/releases/latest/download/DualSubs.Spotify.snippet",
+      "bytes": 2088,
+      "sha256": "b7eacee60adfd1bfa24f81085f00da9e32d1596e7dad33d191956202590d10b9",
+      "notes": "upstream URL dependencies remapped to own repository"
+    },
+    {
+      "file": "ext-subs-netflix.conf",
+      "source": "https://github.com/DualSubs/Netflix/releases/latest/download/DualSubs.Netflix.snippet",
+      "bytes": 1209,
+      "sha256": "99f6ad8fd32a99d584710eec9a530db8547b5679908e1aca4ab3a27a1c3d26d7",
+      "notes": "upstream URL dependencies remapped to own repository"
+    },
+    {
+      "file": "ext-subs-universal.conf",
+      "source": "https://github.com/DualSubs/Universal/releases/latest/download/DualSubs.Universal.snippet",
+      "bytes": 41566,
+      "sha256": "ad95eac3bf5b1c00f5faf202e79a620c24f231774ca9c53f8e619005717e5353",
+      "notes": "upstream URL dependencies remapped to own repository"
+    },
+    {
+      "file": "ext-web-google-endless.conf",
+      "source": "https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Html/EndlessGoogle.conf",
+      "bytes": 764,
+      "sha256": "d0cf79148ebffb76d4eeb6c2559609f1916417c0c1e441df656c344e0044f9de",
+      "notes": "upstream URL dependencies remapped to own repository"
+    },
+    {
+      "file": "ext-web-douban.conf",
+      "source": "https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Html/Douban.conf",
+      "bytes": 1166,
+      "sha256": "a25feb95837c20ae2dec8d38a1cc3a12b9c67f1df4e5dea0a2a91ce2a7d696c3",
+      "notes": "upstream URL dependencies remapped to own repository"
+    },
+    {
+      "file": "ext-boxjs.conf",
+      "source": "https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.quanx.conf",
+      "bytes": 433,
+      "sha256": "deed3e8397404d39ab770f28bd88f85fcfe88acd34e73c0e0e458d8e7c57c5fd",
+      "notes": "upstream URL dependencies remapped to own repository"
+    },
+    {
+      "file": "ext-subs-netflix-LICENSE.txt",
+      "source": "https://github.com/DualSubs/Netflix/blob/main/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-spotify-LICENSE.txt",
+      "source": "https://github.com/DualSubs/Spotify/blob/main/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-universal-LICENSE.txt",
+      "source": "https://github.com/DualSubs/Universal/blob/main/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-youtube-LICENSE.txt",
+      "source": "https://github.com/DualSubs/YouTube/blob/main/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-preference-LICENSE.txt",
+      "source": "https://github.com/NSNanoCat/PreferencePanes/blob/main/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "notes": ""
+    },
+    {
+      "file": "ext-boxjs-LICENSE.txt",
+      "source": "https://github.com/chavyleung/scripts/blob/master/LICENSE",
+      "bytes": 35147,
+      "sha256": "807754cb6b72ad04c5905458909137175831a948468763ef594bf1d89a65959f",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-settings.html",
+      "source": "https://dualsubs.github.io/settings/",
+      "bytes": 116731,
+      "sha256": "be3b9f454f89574315575024a68ce208d4d29a5cc85daea65b81862da670ed6f",
+      "notes": ""
+    },
+    {
+      "file": "ext-subs-settings-home.json",
+      "source": "https://dualsubs.github.io/settings/home.json",
+      "bytes": 2537,
+      "sha256": "33845d5d3ec0beb4df00be1d4fff98d5d590e2237d68041da7b8ba14aecee659",
+      "notes": "icons changed to emoji and unavailable API_External pane omitted"
+    },
+    {
+      "file": "ext-boxjs-release.json",
+      "source": "https://raw.githubusercontent.com/chavyleung/scripts/master/box/release/box.release.json",
+      "bytes": 84016,
+      "sha256": "02596f6a2535c122a2889e53be1ac9b7c74357eb1509b25e40ab54e617c04409",
+      "notes": ""
+    },
+    {
+      "file": "ext-boxjs.html",
+      "source": "https://raw.githubusercontent.com/chavyleung/scripts/0.19.30/box/chavy.boxjs.html",
+      "bytes": 124136,
+      "sha256": "7b404a56bc82f51b66bbc35d795fc9b16d8b9d47eab72af31e076b73fc5d4723",
+      "notes": ""
+    },
+    {
+      "file": "ext-boxjs-dualsubs.json",
+      "source": "DualSubs PreferencePanes release assets",
+      "bytes": 32080,
+      "sha256": "0f8335ad47f5dc997f34c378f8372d1501c38fa2fb7c023875ab953796059d85",
+      "notes": "combined BoxJS app subscription"
+    }
+  ],
+  "adaptations": [
+    "All QX rule executable references use own repository URLs.",
+    "DualSubs settings HTML and home JSON mirrored; missing API_External link omitted.",
+    "BoxJS default HTML and release JSON mirrored. Browser vendor libraries initially retain their upstream CDN URLs.",
+    "No token, Cookie, paid membership, account permission or personal-data values introduced."
+  ],
+  "integrated_date": "2026-10-12"
+}
