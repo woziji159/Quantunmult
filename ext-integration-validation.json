@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-12",
+  "tests": 17,
+  "passed": [
+    "all active resources have parseable rules and existing local dependencies",
+    "single response handler: https://app.bilibili.com/x/resource/show/tab/v2?test=1",
+    "single response handler: https://grpc.biliapi.net/bilibili.app.viewunite.v1.View/View",
+    "single response handler: https://youtubei.googleapis.com/youtubei/v1/player?key=test",
+    "single response handler: https://youtubei.googleapis.com/youtubei/v1/get_watch?key=test",
+    "single response handler: https://youtubei.googleapis.com/youtubei/v1/browse?subtype=Translate",
+    "single response handler: https://www.google.com/search?q=test",
+    "single response handler: https://www.zhihu.com/question/123/answer/456",
+    "single response handler: https://m.douban.com/movie/subject/123/",
+    "single response handler: https://api.pinduoduo.com/api/alexa/homepage/hub?test=1",
+    "Bili enhanced preserves navigation cleanup",
+    "YouTube binary composition finishes on empty protobuf",
+    "Google successful HTML gets cleanup and pagination together",
+    "Google failed retries preserve original challenge",
+    "PDD removes known promotions and retains core tabs",
+    "PDD malformed response passes through",
+    "Zhihu injects once, ignores JSON API responses"
+  ],
+  "activeRules": 1895,
+  "deviceTested": false
+}

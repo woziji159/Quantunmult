@@ -1,0 +1,4 @@
+# https://github.com/NSRingo/WeatherKit/releases/download/v3.3.2/iRingo.WeatherKit.snippet
+host, weather-analytics-events.apple.com, reject
+host-suffix, tthr.apple.com, reject
+host, tether.edge.apple, reject

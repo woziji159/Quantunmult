@@ -1,0 +1,51 @@
+@import url("https://s1.hdslb.com/bfs/seed/jinkela/short/b-style/theme.min.css");
+
+/* 首页与模块页共用 Biliverse 品牌色，模块页通过 CSS 输入加载。
+ * Share the Biliverse accent between the landing page and CSS-imported module pages. */
+:root,
+:root[data-theme] {
+  --biliverse-accent: var(--brand_pink, #ff6699);
+  --pp-accent: var(--biliverse-accent);
+  --pp-background: var(--bg1, #fff);
+  --pp-text: var(--text1, #18191c);
+  --pp-surface: var(--bg1, #fff);
+  --pp-muted: var(--text3, #9499a0);
+  --pp-field: var(--graph_bg_regular, #f1f2f3);
+  --pp-border: var(--line_regular, #e3e5e7);
+}
+/* 通用主题标记也使用官方首页色板，浏览器宿主无需了解客户端类名。
+ * Use the official landing palette for the common theme marker without client classes in the browser host. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --Wh0: #17181a;
+  --Ga0: #101011;
+  --Ga2: #2f3134;
+  --Ga5: #757a81;
+  --Ga7: #a2a7ae;
+  --Ga10: #e7e9eb;
+  --Ga11: #242628;
+  --Ga12: #1f2022;
+  --Pi0: #26161c;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --Wh0: #fff;
+  --Ga0: #f6f7f8;
+  --Ga2: #e3e5e7;
+  --Ga5: #9499a0;
+  --Ga7: #61666d;
+  --Ga10: #18191c;
+  --Ga11: #fff;
+  --Ga12: #f1f2f3;
+  --Pi0: #fff3f6;
+}
+.pp-panel .pp-header,
+.pp-panel .pp-back {
+  color: var(--biliverse-accent);
+}
+
+/* 首页布局随通用入口提供；官方色板和 Biliverse 品牌保留在本站。
+ * The common entry provides landing layout; the official palette and Biliverse branding stay in this site. */
+.pp-home-icon {
+  background: var(--Pi0, #fff3f6);
+}

@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-12",
+  "enabled": [
+    {
+      "file": "ext-boxjs.conf",
+      "tag": "BoxJS设置"
+    },
+    {
+      "file": "ext-bili-enhanced.conf",
+      "tag": "B站界面增强"
+    },
+    {
+      "file": "ext-bili-global.conf",
+      "tag": "B站跨区增强"
+    },
+    {
+      "file": "ext-bili-adblock.conf",
+      "tag": "B站广告净化"
+    },
+    {
+      "file": "ext-apple-weather.conf",
+      "tag": "苹果天气增强"
+    },
+    {
+      "file": "ext-apple-maps.conf",
+      "tag": "苹果地图增强"
+    },
+    {
+      "file": "ext-apple-location.conf",
+      "tag": "苹果定位服务增强"
+    },
+    {
+      "file": "ext-youtube.conf",
+      "tag": "YouTube增强与双语字幕"
+    },
+    {
+      "file": "ext-subs-spotify.conf",
+      "tag": "Spotify双语歌词"
+    },
+    {
+      "file": "ext-subs-netflix.conf",
+      "tag": "Netflix字幕兼容模式"
+    },
+    {
+      "file": "ext-subs-universal.conf",
+      "tag": "通用双语字幕"
+    },
+    {
+      "file": "ext-google.conf",
+      "tag": "Google搜索增强"
+    },
+    {
+      "file": "ext-web-douban.conf",
+      "tag": "豆瓣网页增强"
+    },
+    {
+      "file": "ext-zhihu.conf",
+      "tag": "知乎网页助手"
+    },
+    {
+      "file": "ext-pdd-clean.conf",
+      "tag": "拼多多页面净化"
+    },
+    {
+      "file": "qx-price-compare.conf",
+      "tag": "京东淘宝比价"
+    },
+    {
+      "file": "qx-rewrite-wechat-unblock.conf",
+      "tag": "微信内链接跳转"
+    },
+    {
+      "file": "qx-rewrite-web-ads-extended.conf",
+      "tag": "网页广告净化"
+    },
+    {
+      "file": "qx-rewrite-app-ads-extended.conf",
+      "tag": "应用广告综合重写"
+    },
+    {
+      "file": "qx-rewrite-thunder.conf",
+      "tag": "迅雷会员"
+    }
+  ],
+  "scheduled_tasks": "deferred by user",
+  "device_tested": false
+}

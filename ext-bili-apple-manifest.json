@@ -1,0 +1,340 @@
+{
+  "checked": "2026-10-12",
+  "device_tested": false,
+  "files": [
+    {
+      "filename": "ext-bili-global-config.bundle.js",
+      "source": "https://github.com/Biliverse/Global/releases/download/v0.8.25/config.bundle.js",
+      "size": 2625,
+      "sha256": "2fae5e3ca095154f97341a75f152b18e260c699b8f05a2ba22913c32200bee64",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-global-request.bundle.js",
+      "source": "https://github.com/Biliverse/Global/releases/download/v0.8.25/request.bundle.js",
+      "size": 776798,
+      "sha256": "17681664a1acf4f07143b373ef54adb5faac2caf62067d33deaa42bb37a04abd",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    },
+    {
+      "filename": "ext-bili-global-response.bundle.js",
+      "source": "https://github.com/Biliverse/Global/releases/download/v0.8.25/response.bundle.js",
+      "size": 368892,
+      "sha256": "8d9b417f2aab0f8a22f6e3cebf3b422c94fa502fcb9b222f73bd91c0ec0ecbef",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    },
+    {
+      "filename": "ext-bili-global-LICENSE-Biliverse-Global.txt",
+      "source": "https://raw.githubusercontent.com/Biliverse/Global/main/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-index.html",
+      "source": "https://biliverse.github.io/settings/index.html",
+      "size": 116884,
+      "sha256": "091b20fab77b4cef40a71efe60f511b2257d51f826e3435a469a51f4b2242f45",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-theme.css",
+      "source": "https://biliverse.github.io/settings/theme.css",
+      "size": 1584,
+      "sha256": "373b08e83a4727826a35df50ff889c95088783cc4a9d299f57c47d40be8a575f",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-Biliverse_subject.png",
+      "source": "https://biliverse.github.io/settings/assets/Biliverse_subject.png",
+      "size": 21153,
+      "sha256": "5d323fd482ad2d0541fa93fdf79fd73bb6ea37173365b4291937759eca0dcf68",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-Enhanced_subject.png",
+      "source": "https://biliverse.github.io/settings/assets/Enhanced_subject.png",
+      "size": 21513,
+      "sha256": "134211c977b6570d50f929ebc0c40cfb2af1d5dc3459a99175e502e269edfd42",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-Global_subject.png",
+      "source": "https://biliverse.github.io/settings/assets/Global_subject.png",
+      "size": 22535,
+      "sha256": "1c433265b50f7dc470989d01e69ebe27dd358e9bbbce20be38379a51c7a51358",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-Redirect_subject.png",
+      "source": "https://biliverse.github.io/settings/assets/Redirect_subject.png",
+      "size": 16712,
+      "sha256": "9128a672674d33c1d07289c3bafbc76a4f76414ca5f030fc6fa9e3109e68362b",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-ADBlock_subject.png",
+      "source": "https://biliverse.github.io/settings/assets/ADBlock_subject.png",
+      "size": 18529,
+      "sha256": "450d418aa0d53175cf9f473dfbb8c55d42a43086ed0e18120d180762734f0509",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-api.js",
+      "source": "https://github.com/NSNanoCat/PreferencePanes/releases/latest/download/api.js",
+      "size": 56479,
+      "sha256": "2892d3dbc2544207faf73a6f46f11b6247d6f0ac994a79a6159a993eb57db13e",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-Biliverse.Enhanced.PreferencePanes.json",
+      "source": "https://github.com/Biliverse/Enhanced/releases/download/v0.6.1/Biliverse.Enhanced.PreferencePanes.json",
+      "size": 8158,
+      "sha256": "c2a52e91be335056009f1834157c1cda86537bffa2e28d329d6fdd40168f2bf5",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-response.bundle.js",
+      "source": "https://github.com/Biliverse/Enhanced/releases/download/v0.6.1/response.bundle.js",
+      "size": 169727,
+      "sha256": "d69f5db5aa87b9551da16bef94d665e4ae9f9cbe30b83a3a407e5b88d3f6251c",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    },
+    {
+      "filename": "ext-bili-enhanced-request.bundle.js",
+      "source": "https://github.com/Biliverse/Enhanced/releases/download/v0.6.1/request.bundle.js",
+      "size": 150961,
+      "sha256": "ee2d1f32ef3f3ea7d028c46ac50ec65a076599661551be8b45f7cf3381202535",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-LICENSE-NSNanoCat-PreferencePanes.txt",
+      "source": "https://raw.githubusercontent.com/NSNanoCat/PreferencePanes/main/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-LICENSE-Biliverse-Enhanced.txt",
+      "source": "https://raw.githubusercontent.com/Biliverse/Enhanced/main/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-adblock-BiliBili.ADBlock.boxjs.json",
+      "source": "https://github.com/Biliverse/ADBlock/releases/download/v0.7.3/BiliBili.ADBlock.boxjs.json",
+      "size": 5981,
+      "sha256": "f5fb1319de5b2258064ac9180e73654b9c0ed29ee395d4c36b6e22e05990360b",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-adblock-request.bundle.js",
+      "source": "https://github.com/Biliverse/ADBlock/releases/download/v0.7.3/request.bundle.js",
+      "size": 215764,
+      "sha256": "8d97bf10cfb408933db0cd8c84e7f372fc50006d9b9985e021339f2e11785bef",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-adblock-response.bundle.js",
+      "source": "https://github.com/Biliverse/ADBlock/releases/download/v0.7.3/response.bundle.js",
+      "size": 1091915,
+      "sha256": "9beef2563ecccffd17371a15d80488fdc24659d02f75f6b65c0b281463cbd70b",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    },
+    {
+      "filename": "ext-bili-adblock-LICENSE-Biliverse-ADBlock.txt",
+      "source": "https://raw.githubusercontent.com/Biliverse/ADBlock/main/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-weather-response.bundle.js",
+      "source": "https://github.com/NSRingo/WeatherKit/releases/download/v3.3.2/response.bundle.js",
+      "size": 286476,
+      "sha256": "ce1db90d77c44fce972db0c2e319845fc1d6a276d41d772c0294882e59d7f999",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-weather-request.bundle.js",
+      "source": "https://github.com/NSRingo/WeatherKit/releases/download/v3.3.2/request.bundle.js",
+      "size": 180133,
+      "sha256": "da05af299dd2172e1c25a2bff349cdda268114ee7fc43340cc48da29c76ea033",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-weather-LICENSE-NSRingo-WeatherKit.txt",
+      "source": "https://raw.githubusercontent.com/NSRingo/WeatherKit/main/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-maps-request.bundle.js",
+      "source": "https://github.com/NSRingo/GeoServices/releases/download/v4.6.1/request.bundle.js",
+      "size": 151666,
+      "sha256": "4483623a4b6b9cbef897b25e7881a03143461055696fc5a750af518165b96dc2",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-maps-response.bundle.js",
+      "source": "https://github.com/NSRingo/GeoServices/releases/download/v4.6.1/response.bundle.js",
+      "size": 155957,
+      "sha256": "4d6c18dca53c4ae85ac836a2d3d19f7be1a7fc32e2c74af5783ec6a62cb75fd0",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-maps-LICENSE-NSRingo-MapKit.txt",
+      "source": "https://raw.githubusercontent.com/NSRingo/MapKit/main/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-maps-LICENSE-NSRingo-GeoServices.txt",
+      "source": "https://raw.githubusercontent.com/NSRingo/GeoServices/main/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-location-request.bundle.js",
+      "source": "https://github.com/NSRingo/LocationService/releases/download/v1.0.1/request.bundle.js",
+      "size": 459760,
+      "sha256": "7d5485f6420b8505e7636423a04bfd75bdded10e37b9f667cf958b6f5711658d",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-location-response.bundle.js",
+      "source": "https://github.com/NSRingo/LocationService/releases/download/v1.0.1/response.bundle.js",
+      "size": 461792,
+      "sha256": "c3cbe06b7dc684d35c69018c732abd5ed67e4c63a31badeb7fa63fd81dd42284",
+      "modified": false
+    },
+    {
+      "filename": "ext-apple-location-LICENSE-NSRingo-LocationService.txt",
+      "source": "https://raw.githubusercontent.com/NSRingo/LocationService/main/LICENSE",
+      "size": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-global.conf",
+      "source": "https://github.com/Biliverse/Global/releases/download/v0.8.25/BiliBili.Global.snippet",
+      "size": 5807,
+      "sha256": "a3799ac6312660bb7bf5448e0a487b4722e026dd2663b204abf989f793b08369",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    },
+    {
+      "filename": "ext-bili-enhanced.conf",
+      "source": "https://github.com/Biliverse/Enhanced/releases/download/v0.6.0/Biliverse.Enhanced.snippet",
+      "size": 3567,
+      "sha256": "bf91f042bd861791eeda9cf45a66a7c5132ef1c2dd2d7aef095aee762e714eac",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    },
+    {
+      "filename": "ext-bili-adblock.conf",
+      "source": "https://github.com/Biliverse/ADBlock/releases/download/v0.7.3/BiliBili.ADBlock.snippet",
+      "size": 6655,
+      "sha256": "6b2cc2556b9d71949bf03aa2a55cdda6db9c62b1f1d6fbeece99271025b9c36b",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    },
+    {
+      "filename": "ext-apple-weather.conf",
+      "source": "https://github.com/NSRingo/WeatherKit/releases/download/v3.3.2/iRingo.WeatherKit.snippet",
+      "size": 2199,
+      "sha256": "9dde3a106fff28cec48ad726f9420ca9c59bbaaf67ceb03e337f3ae878717fb3",
+      "modified": true,
+      "changes": "Self-host script/assets; split filter lines"
+    },
+    {
+      "filename": "ext-apple-weather.list",
+      "source": "https://github.com/NSRingo/WeatherKit/releases/download/v3.3.2/iRingo.WeatherKit.snippet",
+      "size": 208,
+      "sha256": "99061945c2555272d46f1e573c4eb52c831474b1b16b3caff2a4deef04e45c87",
+      "modified": true
+    },
+    {
+      "filename": "ext-apple-maps.conf",
+      "source": "https://github.com/NSRingo/MapKit/releases/download/v4.6.1/iRingo.Maps.snippet",
+      "size": 2046,
+      "sha256": "084992666c1eb0b16a612816d78cc0ffc37458822471b2a58c6b55a2f80205ea",
+      "modified": true,
+      "changes": "Self-host script/assets; split filter lines"
+    },
+    {
+      "filename": "ext-apple-maps.list",
+      "source": "https://github.com/NSRingo/MapKit/releases/download/v4.6.1/iRingo.Maps.snippet",
+      "size": 327,
+      "sha256": "302df676cbd9b93fead1d89056c2a6af340752f7621741674aac0a90054be7ff",
+      "modified": true
+    },
+    {
+      "filename": "ext-apple-location.conf",
+      "source": "https://github.com/NSRingo/LocationService/releases/download/v1.0.1/iRingo.LocationService.snippet",
+      "size": 1423,
+      "sha256": "6b4b2566156ff75a058b1c920570e8d1f6fc1cba9d0da771d65bed6c102b8e34",
+      "modified": true,
+      "changes": "Self-host script/assets; split filter lines"
+    },
+    {
+      "filename": "ext-apple-location.list",
+      "source": "https://github.com/NSRingo/LocationService/releases/download/v1.0.1/iRingo.LocationService.snippet",
+      "size": 179,
+      "sha256": "eaceea74e53dbb3eab73ed2db1e2238e125169ea0a952388a86930629ff2fc9b",
+      "modified": true
+    },
+    {
+      "filename": "ext-bili-enhanced-home.html",
+      "source": "Locally composed from the licensed sources in this manifest",
+      "size": 116731,
+      "sha256": "be3b9f454f89574315575024a68ce208d4d29a5cc85daea65b81862da670ed6f",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    },
+    {
+      "filename": "ext-bili-adblock-config.bundle.js",
+      "source": "Locally composed from the licensed sources in this manifest",
+      "size": 6885,
+      "sha256": "bbb2356450e169d40bb3e132aa3718fc5aa67c74ffa4b3fe6711ef779721afc1",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-view-response.bundle.js",
+      "source": "Locally composed from the licensed sources in this manifest",
+      "size": 1462251,
+      "sha256": "423809fb9c53ef00b944d186746a8b3636cb6168c75d739bf27ece6a51364e65",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    },
+    {
+      "filename": "ext-bili-enhanced-config.bundle.js",
+      "source": "Locally composed from the licensed sources in this manifest",
+      "size": 9854,
+      "sha256": "dabfdfe02a396fa022e0ba0b07d5fd63ef9658f797ddc0320e665c1e24cd1477",
+      "modified": false
+    },
+    {
+      "filename": "ext-bili-enhanced-home.json",
+      "source": "Locally composed from the licensed sources in this manifest",
+      "size": 2065,
+      "sha256": "d5206b2d7e4ff30af42ae5b448c1d1ebddbb4806d5a1c0dbea706bc1fd574583",
+      "modified": true,
+      "changes": "Self-hosting integration: regional policy mapping; response composition; navigation cleanup; repaired settings assets, as applicable."
+    }
+  ],
+  "notes": [
+    "Enhanced updated from 0.6.0 to 0.6.1 on 2026-10-12.",
+    "No iPhone runtime test yet; fixture and dependency checks are recorded separately.",
+    "Apple defaults preserved; maps CN domain added to MitM."
+  ],
+  "integrated_date": "2026-10-12"
+}

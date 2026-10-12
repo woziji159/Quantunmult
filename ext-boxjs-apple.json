@@ -1,0 +1,886 @@
+{
+  "id": "woziji159.Quantunmult.iRingo",
+  "name": "本仓库：苹果天气、地图、定位设置",
+  "author": "@VirgilClyne",
+  "description": "解锁完整的 Apple功能和集成服务",
+  "icon": "https://avatars.githubusercontent.com/u/182791244?s=200&v=4",
+  "repo": "https://github.com/NSRingo",
+  "apps": [
+    {
+      "id": "iRingo.WeatherKit",
+      "name": "🌤 WeatherKit",
+      "descs_html": [
+        "请参照<a href=\"https://NSRingo.github.io/guide/Weather/weather-kit\">🌤 WeatherKit</a>的使用说明进行配置",
+        "填写完成后别忘点击此页面底端右下角的\"保存\"。"
+      ],
+      "keys": [
+        "@iRingo.WeatherKit.Settings",
+        "@iRingo.WeatherKit.Caches"
+      ],
+      "settings": [
+        {
+          "id": "@iRingo.WeatherKit.Settings.DataSets",
+          "name": "[数据集]",
+          "type": "checkboxes",
+          "val": [
+            "airQuality",
+            "currentWeather",
+            "forecastDaily",
+            "forecastHourly",
+            "forecastNextHour",
+            "weatherAlerts"
+          ],
+          "items": [
+            {
+              "key": "airQuality",
+              "label": "空气质量"
+            },
+            {
+              "key": "currentWeather",
+              "label": "当前天气"
+            },
+            {
+              "key": "forecastDaily",
+              "label": "每日预报"
+            },
+            {
+              "key": "forecastHourly",
+              "label": "每小时预报"
+            },
+            {
+              "key": "forecastNextHour",
+              "label": "未来一小时降水强度"
+            },
+            {
+              "key": "weatherAlerts",
+              "label": "天气预警"
+            }
+          ],
+          "desc": "选择需要解析并处理的数据集；未选择的数据槽始终保持原样透传，不作修改。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.Weather.Replace",
+          "name": "[天气] 替换范围",
+          "type": "text",
+          "val": "CN",
+          "desc": "正则表达式，只替换指定地区的天气。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.Weather.Provider",
+          "name": "[天气] 数据源",
+          "type": "selects",
+          "val": "ColorfulClouds",
+          "items": [
+            {
+              "key": "WeatherKit",
+              "label": "WeatherKit（不替换）"
+            },
+            {
+              "key": "ColorfulClouds",
+              "label": "彩云天气"
+            },
+            {
+              "key": "QWeather",
+              "label": "和风天气"
+            }
+          ],
+          "desc": "使用选定的数据源替换天气数据。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.WeatherAlerts.Provider",
+          "name": "[天气预警] 数据源",
+          "type": "selects",
+          "val": "QWeatherWeb",
+          "items": [
+            {
+              "key": "WeatherKit",
+              "label": "WeatherKit（不修改）"
+            },
+            {
+              "key": "QWeatherWeb",
+              "label": "和风天气网页"
+            },
+            {
+              "key": "QWeather",
+              "label": "和风天气 API"
+            },
+            {
+              "key": "ColorfulClouds",
+              "label": "彩云天气 API"
+            }
+          ],
+          "desc": "使用选定的数据源处理天气预警数据。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.NextHour.Provider",
+          "name": "[未来一小时降水强度] 数据源",
+          "type": "selects",
+          "val": "ColorfulClouds",
+          "items": [
+            {
+              "key": "WeatherKit",
+              "label": "WeatherKit（不添加）"
+            },
+            {
+              "key": "ColorfulClouds",
+              "label": "彩云天气"
+            },
+            {
+              "key": "QWeather",
+              "label": "和风天气"
+            }
+          ],
+          "desc": "使用选定的数据源填充未来一小时降水强度的数据。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Pollutants.Provider",
+          "name": "[今日污染物] 数据源",
+          "type": "selects",
+          "val": "ColorfulClouds",
+          "items": [
+            {
+              "key": "ColorfulClouds",
+              "label": "彩云天气"
+            },
+            {
+              "key": "QWeather",
+              "label": "和风天气"
+            }
+          ],
+          "desc": "使用选定的数据源填补污染物数据。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Pollutants.Units.Replace",
+          "name": "[今日污染物 - 单位转换] 替换目标",
+          "type": "checkboxes",
+          "val": [],
+          "items": [
+            {
+              "key": "EPA_NowCast",
+              "label": "美国AQI（EPA_NowCast）"
+            },
+            {
+              "key": "EU.EAQI",
+              "label": "欧盟EAQI（EU.EAQI）"
+            },
+            {
+              "key": "HJ6332012",
+              "label": "中国AQI（HJ6332012）"
+            },
+            {
+              "key": "UBA",
+              "label": "德国LQI（UBA）"
+            }
+          ],
+          "desc": "转换污染物的单位，方便与空气质量标准比对。单位转换会产生小数，有略微精度损失，且小数部分可能会被省略。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Pollutants.Units.Mode",
+          "name": "[今日污染物 - 单位转换] 模式",
+          "type": "selects",
+          "val": "Scale",
+          "items": [
+            {
+              "key": "Scale",
+              "label": "与空气质量标准的要求相同"
+            },
+            {
+              "key": "ugm3",
+              "label": "除非标准要求，都转为µg/m³"
+            },
+            {
+              "key": "EU_ppb",
+              "label": "除非标准要求，都转为欧盟ppb"
+            },
+            {
+              "key": "US_ppb",
+              "label": "除非标准要求，都转为美标ppb"
+            },
+            {
+              "key": "Force_ugm3",
+              "label": "µg/m³"
+            },
+            {
+              "key": "Force_EU_ppb",
+              "label": "欧盟ppb"
+            },
+            {
+              "key": "Force_US_ppb",
+              "label": "美标ppb"
+            }
+          ],
+          "desc": "污染物单位的转换目标。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Index.Replace",
+          "name": "[今日空气指数] 替换目标",
+          "type": "checkboxes",
+          "val": [
+            "HJ6332012"
+          ],
+          "items": [
+            {
+              "key": "HJ6332012",
+              "label": "中国AQI（HJ6332012）"
+            },
+            {
+              "key": "IE.AQIH",
+              "label": "爱尔兰AQIH（IE.AQIH）"
+            },
+            {
+              "key": "AT.AQI",
+              "label": "奥地利AQI（AT.AQI）"
+            },
+            {
+              "key": "BE.BelAQI",
+              "label": "比利时BelAQI（BE.BelAQI）"
+            },
+            {
+              "key": "UBA",
+              "label": "德国LQI（UBA）"
+            },
+            {
+              "key": "FR.ATMO",
+              "label": "法国IQA（FR.ATMO）"
+            },
+            {
+              "key": "KR.CAI",
+              "label": "韩国CAI（KR.CAI）"
+            },
+            {
+              "key": "CA.AQHI",
+              "label": "加拿大AQHI（CA.AQHI）"
+            },
+            {
+              "key": "CZ.AQI",
+              "label": "捷克AQI（CZ.AQI）"
+            },
+            {
+              "key": "NL.LKI",
+              "label": "荷兰LKI（NL.LKI）"
+            },
+            {
+              "key": "EPA_NowCast",
+              "label": "美国AQI（EPA_NowCast）"
+            },
+            {
+              "key": "ICARS",
+              "label": "墨西哥ICARS（ICARS）"
+            },
+            {
+              "key": "EU.EAQI",
+              "label": "欧盟EAQI（EU.EAQI）"
+            },
+            {
+              "key": "CH.KBI",
+              "label": "瑞士KBI（CH.KBI）"
+            },
+            {
+              "key": "ES.MITECO",
+              "label": "西班牙ICA（ES.MITECO）"
+            },
+            {
+              "key": "SG.NEA",
+              "label": "新加坡PSI（SG.NEA）"
+            },
+            {
+              "key": "NAQI",
+              "label": "印度NAQI（NAQI）"
+            },
+            {
+              "key": "DAQI",
+              "label": "英国DAQI（DAQI）"
+            }
+          ],
+          "desc": "替换指定标准的空气质量指数。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Index.Provider",
+          "name": "[今日空气指数] 数据源",
+          "type": "selects",
+          "val": "Calculate",
+          "items": [
+            {
+              "key": "Calculate",
+              "label": "iRingo内置算法"
+            },
+            {
+              "key": "ColorfulCloudsUS",
+              "label": "彩云天气（美标，18年9月版）"
+            },
+            {
+              "key": "ColorfulCloudsCN",
+              "label": "彩云天气（国标，12年2月版）"
+            },
+            {
+              "key": "QWeather",
+              "label": "和风天气（国标，12年2月版）"
+            }
+          ],
+          "desc": "使用选定的数据源填补和替换空气质量指数。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Current.Index.ForceCNPrimaryPollutants",
+          "name": "[今日空气指数] 强制主要污染物",
+          "type": "boolean",
+          "val": true,
+          "desc": "忽略国标（HJ 633—2012）的AQI > 50规定，始终将IAQI最大的空气污染物作为主要污染物。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Comparison.ReplaceWhenCurrentChange",
+          "name": "[空气质量 - 对比昨日] 变化时替换",
+          "type": "boolean",
+          "val": false,
+          "desc": "即使已有对比昨日数据，当今日空气质量指数发生变化时，替换对比昨日数据。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Comparison.Yesterday.PollutantsProvider",
+          "name": "[昨日污染物] 数据源",
+          "type": "selects",
+          "val": "QWeather",
+          "items": [
+            {
+              "key": "QWeather",
+              "label": "和风天气"
+            }
+          ],
+          "desc": "为iRingo内置算法提供污染物数据，计算出昨日的空气质量指数。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Comparison.Yesterday.IndexProvider",
+          "name": "[昨日空气指数] 数据源",
+          "type": "selects",
+          "val": "ColorfulCloudsUS",
+          "items": [
+            {
+              "key": "Calculate",
+              "label": "iRingo内置算法"
+            },
+            {
+              "key": "ColorfulCloudsUS",
+              "label": "彩云天气（美标，18年9月版）"
+            },
+            {
+              "key": "ColorfulCloudsCN",
+              "label": "彩云天气（国标，12年2月版）"
+            },
+            {
+              "key": "QWeather",
+              "label": "和风天气（国标，12年2月版）"
+            }
+          ],
+          "desc": "用来和今日空气质量指数对比的数据。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Calculate.Algorithm",
+          "name": "[iRingo内置算法] 算法",
+          "type": "selects",
+          "val": "EU_EAQI",
+          "items": [
+            {
+              "key": "None",
+              "label": "不转换"
+            },
+            {
+              "key": "UBA",
+              "label": "德国LQI（FB001846）"
+            },
+            {
+              "key": "EU_EAQI",
+              "label": "欧盟EAQI（ETC HE Report 2024/17）"
+            },
+            {
+              "key": "WAQI_InstantCast_US",
+              "label": "美标InstantCast（EPA-454/B-24-002）"
+            },
+            {
+              "key": "WAQI_InstantCast_CN",
+              "label": "国标InstantCast（HJ 633—2012）"
+            },
+            {
+              "key": "WAQI_InstantCast_CN_25_DRAFT",
+              "label": "国标InstantCast（HJ 633 2025年草案）"
+            },
+            {
+              "key": "CA_AQHI",
+              "label": "加拿大AQHI（10.17269/s41997-019-00237-w）"
+            },
+            {
+              "key": "HK_AQHI",
+              "label": "香港AQHI"
+            },
+            {
+              "key": "AQHI_Multi_CN",
+              "label": "AQHI-Multi（中国）"
+            },
+            {
+              "key": "AQHI_Multi_CN_HK",
+              "label": "AQHI-Multi（中国+香港）"
+            },
+            {
+              "key": "CN_DEATH_AQHI",
+              "label": "中国（致死风险）AQHI"
+            },
+            {
+              "key": "CN_DEATH_HK_AQHI",
+              "label": "中国（致死风险）+香港AQHI"
+            }
+          ],
+          "desc": "使用内置算法，通过污染物数据本地计算空气指数。InstantCast源自于WAQI，美标版本使用了WAQI的臭氧标准。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.AirQuality.Calculate.AllowOverRange",
+          "name": "[iRingo内置算法] 允许指数超标",
+          "type": "boolean",
+          "val": true,
+          "desc": "允许美标和国标的指数超过500。超过500时，指示颜色的小圆点会消失。"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.API.ColorfulClouds.Token",
+          "name": "[API] 彩云天气令牌",
+          "type": "text",
+          "val": "",
+          "desc": "彩云天气 API 令牌",
+          "placeholder": "123456789123456789abcdefghijklmnopqrstuv"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.API.QWeather.Host",
+          "name": "[API] 和风天气主机",
+          "type": "text",
+          "val": "devapi.qweather.com",
+          "desc": "和风天气 API 使用的主机名",
+          "placeholder": "devapi.qweather.com"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.API.QWeather.Token",
+          "name": "[API] 和风天气令牌",
+          "type": "text",
+          "val": "",
+          "desc": "和风天气 API 令牌",
+          "placeholder": "123456789123456789abcdefghijklmnopqrstuv"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.API.WAQI.Token",
+          "name": "[API] WAQI 令牌",
+          "type": "text",
+          "val": "",
+          "desc": "WAQI API 令牌，填写此字段将自动使用WAQI高级API",
+          "placeholder": "123456789123456789abcdefghijklmnopqrstuv"
+        },
+        {
+          "id": "@iRingo.WeatherKit.Settings.LogLevel",
+          "name": "[调试] 日志等级",
+          "type": "selects",
+          "val": "WARN",
+          "items": [
+            {
+              "key": "OFF",
+              "label": "关闭"
+            },
+            {
+              "key": "ERROR",
+              "label": "❌ 错误"
+            },
+            {
+              "key": "WARN",
+              "label": "⚠️ 警告"
+            },
+            {
+              "key": "INFO",
+              "label": "ℹ️ 信息"
+            },
+            {
+              "key": "DEBUG",
+              "label": "🅱️ 调试"
+            },
+            {
+              "key": "ALL",
+              "label": "全部"
+            }
+          ],
+          "desc": "选择脚本日志的输出等级，低于所选等级的日志将全部输出。"
+        }
+      ],
+      "author": "@VirgilClyne",
+      "repo": "https://github.com/NSRingo/WeatherKit",
+      "icons": [
+        "https://developer.apple.com/assets/elements/icons/weatherkit/weatherkit-128x128.png",
+        "https://developer.apple.com/assets/elements/icons/weatherkit/weatherkit-128x128.png"
+      ]
+    },
+    {
+      "id": "iRingo.LocationService",
+      "name": "📍 定位服务",
+      "descs_html": [
+        "请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/location-services\">📍 定位</a>的使用说明进行配置",
+        "影响功能范围包括但不限于“定位检测”、“地点信息”等"
+      ],
+      "keys": [
+        "@iRingo.LocationService.Settings",
+        "@iRingo.LocationService.Caches"
+      ],
+      "settings": [
+        {
+          "id": "@iRingo.LocationService.Settings.GeoCountryCode",
+          "name": "[地区检测] 地理国家或地区代码",
+          "type": "selects",
+          "val": "US",
+          "items": [
+            {
+              "key": "AUTO",
+              "label": "🇺🇳自动（跟随地区检测结果）"
+            },
+            {
+              "key": "CN",
+              "label": "🇨🇳中国大陆"
+            },
+            {
+              "key": "HK",
+              "label": "🇭🇰中国香港"
+            },
+            {
+              "key": "TW",
+              "label": "🇹🇼中国台湾"
+            },
+            {
+              "key": "SG",
+              "label": "🇸🇬新加坡"
+            },
+            {
+              "key": "US",
+              "label": "🇺🇸美国"
+            },
+            {
+              "key": "JP",
+              "label": "🇯🇵日本"
+            },
+            {
+              "key": "AU",
+              "label": "🇦🇺澳大利亚"
+            },
+            {
+              "key": "GB",
+              "label": "🇬🇧英国"
+            },
+            {
+              "key": "KR",
+              "label": "🇰🇷韩国"
+            },
+            {
+              "key": "CA",
+              "label": "🇨🇦加拿大"
+            },
+            {
+              "key": "IE",
+              "label": "🇮🇪爱尔兰"
+            }
+          ],
+          "desc": "要更改为的地区或国家，此选项影响GPS/Wi-Fi/有线网络下国家和地区检测的结果。"
+        },
+        {
+          "id": "@iRingo.LocationService.Settings.Dispatcher.Hybrid",
+          "name": "[调度器] 融合数据",
+          "type": "boolean",
+          "val": true,
+          "desc": "地点数据接口，此选项影响公共指南，兴趣点(POI)与位置信息等功能。(注：使用国际版调度器时，不会进行数据融合）"
+        },
+        {
+          "id": "@iRingo.LocationService.Settings.LogLevel",
+          "name": "[调试] 日志等级",
+          "type": "selects",
+          "val": "WARN",
+          "items": [
+            {
+              "key": "OFF",
+              "label": "关闭"
+            },
+            {
+              "key": "ERROR",
+              "label": "❌ 错误"
+            },
+            {
+              "key": "WARN",
+              "label": "⚠️ 警告"
+            },
+            {
+              "key": "INFO",
+              "label": "ℹ️ 信息"
+            },
+            {
+              "key": "DEBUG",
+              "label": "🅱️ 调试"
+            },
+            {
+              "key": "ALL",
+              "label": "全部"
+            }
+          ],
+          "desc": "选择脚本日志的输出等级，低于所选等级的日志将全部输出。"
+        }
+      ],
+      "author": "@VirgilClyne",
+      "repo": "https://github.com/NSRingo/LocationService",
+      "icons": [
+        "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png",
+        "https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iOS/ios15-location-arrow-status-icon.png"
+      ]
+    },
+    {
+      "id": "iRingo.Maps",
+      "name": "🗺️ 地图",
+      "descs_html": [
+        "请参照<a href=\"https://NSRingo.github.io/guide/GeoServices/maps\">🗺️ 地图</a>的使用说明进行配置",
+        "影响功能范围包括但不限于“地图”、“Apple News”、“指南针”等"
+      ],
+      "keys": [
+        "@iRingo.MapKit.Settings",
+        "@iRingo.MapKit.Caches"
+      ],
+      "settings": [
+        {
+          "id": "@iRingo.MapKit.Settings.GeoManifest.Dynamic.Config.CountryCode",
+          "name": "[动态配置] 资源清单的国家或地区代码",
+          "type": "selects",
+          "val": "CN",
+          "items": [
+            {
+              "key": "AUTO",
+              "label": "🇺🇳自动（跟随用户当前所在地区）"
+            },
+            {
+              "key": "CN",
+              "label": "🇨🇳中国大陆"
+            },
+            {
+              "key": "HK",
+              "label": "🇭🇰中国香港"
+            },
+            {
+              "key": "TW",
+              "label": "🇹🇼中国台湾"
+            },
+            {
+              "key": "SG",
+              "label": "🇸🇬新加坡"
+            },
+            {
+              "key": "US",
+              "label": "🇺🇸美国"
+            },
+            {
+              "key": "JP",
+              "label": "🇯🇵日本"
+            },
+            {
+              "key": "AU",
+              "label": "🇦🇺澳大利亚"
+            },
+            {
+              "key": "GB",
+              "label": "🇬🇧英国"
+            },
+            {
+              "key": "KR",
+              "label": "🇰🇷韩国"
+            },
+            {
+              "key": "CA",
+              "label": "🇨🇦加拿大"
+            },
+            {
+              "key": "IE",
+              "label": "🇮🇪爱尔兰"
+            }
+          ],
+          "desc": "此选项影响“地图”整体配置内容，包括以下的地图功能与服务。"
+        },
+        {
+          "id": "@iRingo.MapKit.Settings.UrlInfoSet.Dispatcher",
+          "name": "[URL信息集] 调度器",
+          "type": "selects",
+          "val": "AutoNavi",
+          "items": [
+            {
+              "key": "AUTO",
+              "label": "🇺🇳自动（随[动态配置]版本自动选择）"
+            },
+            {
+              "key": "AutoNavi",
+              "label": "🧭高德（🇨🇳:互动百科/大众点评/携程 | 🇺🇳:维基百科/Yelp/Booking）"
+            },
+            {
+              "key": "Apple",
+              "label": "Apple（维基百科/Yelp/Booking）"
+            }
+          ],
+          "desc": "地点数据接口，此选项影响公共指南，兴趣点(POI)与位置信息等功能。"
+        },
+        {
+          "id": "@iRingo.MapKit.Settings.UrlInfoSet.Directions",
+          "name": "[URL信息集] 导航与ETA",
+          "type": "selects",
+          "val": "AutoNavi",
+          "items": [
+            {
+              "key": "AUTO",
+              "label": "🇺🇳自动（随[动态配置]版本自动选择）"
+            },
+            {
+              "key": "AutoNavi",
+              "label": "🧭高德（🇨🇳:高德地图 | 🇺🇳:TomTom）"
+            },
+            {
+              "key": "Apple",
+              "label": "Apple（🇨🇳:🈚️ | 🇺🇳:TomTom）"
+            }
+          ],
+          "desc": "导航与ETA服务接口，此选项影响导航与ETA(到达时间)等功能。"
+        },
+        {
+          "id": "@iRingo.MapKit.Settings.UrlInfoSet.RAP",
+          "name": "[URL信息集] 评分和照片",
+          "type": "selects",
+          "val": "Apple",
+          "items": [
+            {
+              "key": "AUTO",
+              "label": "🇺🇳自动（随[动态配置]版本自动选择）"
+            },
+            {
+              "key": "AutoNavi",
+              "label": "🧭高德（🇨🇳:🈶️但未开放 | 🇺🇳:🈚️）"
+            },
+            {
+              "key": "Apple",
+              "label": "Apple（🇨🇳:🈚️ | 🇺🇳:🈶️）"
+            }
+          ],
+          "desc": "评分和照片服务接口，此选项影响评分和照片服务以及照片使用。"
+        },
+        {
+          "id": "@iRingo.MapKit.Settings.UrlInfoSet.LocationShift",
+          "name": "[URL信息集] 定位漂移",
+          "type": "selects",
+          "val": "AUTO",
+          "items": [
+            {
+              "key": "AUTO",
+              "label": "🇺🇳自动（随[动态配置]版本自动选择）"
+            },
+            {
+              "key": "AutoNavi",
+              "label": "🧭高德（🈚️坐标，使用🇨🇳GCJ-02坐标）"
+            },
+            {
+              "key": "Apple",
+              "label": "Apple（🈶️坐标，使用🇺🇳WGS-84坐标）"
+            }
+          ],
+          "desc": "定位漂移修正服务接口，控制定位漂移和🧭指南针与📍坐标的经纬度。"
+        },
+        {
+          "id": "@iRingo.MapKit.Settings.TileSet.Earth",
+          "name": "[瓦片数据集] 地球图像",
+          "type": "selects",
+          "val": "AUTO",
+          "items": [
+            {
+              "key": "AUTO",
+              "label": "🇺🇳自动（随[动态配置]版本自动选择）"
+            },
+            {
+              "key": "AutoNavi",
+              "label": "🧭高德版（主要显示国家与国界）"
+            },
+            {
+              "key": "Apple",
+              "label": "Apple（主要显示城市与地貌）"
+            }
+          ],
+          "desc": "此选项影响地球视图下行政区划、地貌等信息的显示。"
+        },
+        {
+          "id": "@iRingo.MapKit.Settings.TileSet.Roads",
+          "name": "[瓦片数据集] 道路图像与四处看看",
+          "type": "selects",
+          "val": "AUTO",
+          "items": [
+            {
+              "key": "AUTO",
+              "label": "🇺🇳自动（随[动态配置]版本自动选择）"
+            },
+            {
+              "key": "CN",
+              "label": "🇨🇳中国（🇨🇳:卫星视图道路正确 | 🇺🇳:无四处看看）"
+            },
+            {
+              "key": "XX",
+              "label": "Apple（🇨🇳:卫星视图道路偏移 | 🇺🇳:有四处看看）"
+            }
+          ],
+          "desc": "此选项影响卫星视图下的道路图像与四处看看可用路段。"
+        },
+        {
+          "id": "@iRingo.MapKit.Settings.TileSet.Satellite",
+          "name": "[瓦片数据集] 卫星图像",
+          "type": "selects",
+          "val": "CN",
+          "items": [
+            {
+              "key": "AUTO",
+              "label": "🇺🇳自动（随[动态配置]版本自动选择）"
+            },
+            {
+              "key": "CN",
+              "label": "🇨🇳中国四维（仅🇨🇳）"
+            },
+            {
+              "key": "XX",
+              "label": "🇺🇳DigitalGlobe（全球，但🇨🇳较旧）"
+            }
+          ],
+          "desc": "此选项影响 2D 卫星图像的版本。"
+        },
+        {
+          "id": "@iRingo.MapKit.Settings.LogLevel",
+          "name": "[调试] 日志等级",
+          "type": "selects",
+          "val": "WARN",
+          "items": [
+            {
+              "key": "OFF",
+              "label": "关闭"
+            },
+            {
+              "key": "ERROR",
+              "label": "❌ 错误"
+            },
+            {
+              "key": "WARN",
+              "label": "⚠️ 警告"
+            },
+            {
+              "key": "INFO",
+              "label": "ℹ️ 信息"
+            },
+            {
+              "key": "DEBUG",
+              "label": "🅱️ 调试"
+            },
+            {
+              "key": "ALL",
+              "label": "全部"
+            }
+          ],
+          "desc": "选择脚本日志的输出等级，低于所选等级的日志将全部输出。"
+        }
+      ],
+      "author": "@VirgilClyne",
+      "repo": "https://github.com/NSRingo/Maps",
+      "icons": [
+        "https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png",
+        "https://developer.apple.com/assets/elements/icons/maps/maps-128x128.png"
+      ]
+    }
+  ]
+}

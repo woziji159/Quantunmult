@@ -1,0 +1,7 @@
+# https://github.com/NSRingo/MapKit/releases/download/v4.6.1/iRingo.Maps.snippet
+host-suffix, is.autonavi.com, direct
+host, gspe11-2-cn-ssl.ls.apple.com, direct
+host, gspe12-cn-ssl.ls.apple.com, direct
+host, gspe19-cn-ssl.ls.apple.com, direct
+host, gspe19-2-cn-ssl.ls.apple.com, direct
+host, gspe79-cn-ssl.ls.apple.com, direct

@@ -1,0 +1,3 @@
+# https://github.com/NSRingo/LocationService/releases/download/v1.0.1/iRingo.LocationService.snippet
+host, gspe1-ssl.ls.apple.com, direct
+host, dispatcher.is.autonavi.com, direct

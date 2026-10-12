@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-12",
+  "files": [
+    {
+      "file": "ext-browser-Adblock4limbo.user.js",
+      "source": "https://limbopro.com/Adguard/Adblock4limbo.user.js",
+      "sha256": "f166c0fc08817f246e495e8a6de8f5203f8f6c2e3bf5477cece5087462a1a3a0"
+    },
+    {
+      "file": "ext-browser-Adblock4limbo.function.js",
+      "source": "https://limbopro.com/Adguard/Adblock4limbo.function.js",
+      "sha256": "0ff39b6603904b34271de67223cc4fb426ed8c948f2b7f234e3954f6d95f7d71"
+    },
+    {
+      "file": "ext-browser-elementBlocker.user.js",
+      "source": "https://limbopro.com/Adguard/elementBlocker.user.js",
+      "sha256": "40724b4e700f48f69e0bc2e553604b81d2e2ae84645b6acab5c8f17feb1af6cf"
+    },
+    {
+      "file": "ext-browser-autoAdDetector.js",
+      "source": "https://limbopro.com/Adguard/autoAdDetector.js",
+      "sha256": "161257bcb1c39749db5b6c8dcbcf950224a679567e89d7ee0fdf683513511f8c"
+    }
+  ],
+  "license": "Repository MIT; individual userscript headers include CC BY-NC-SA 4.0. Preserve both.",
+  "runtime_dependencies": "Site-specific CSS and on-demand toolbar extensions retain upstream URLs. Core executable JS uses this repository via jsDelivr for correct browser MIME type.",
+  "omitted": "isAgent.js invalid #alert statement; no useful filtering logic",
+  "integrated_date": "2026-10-12",
+  "device_tested": false
+}
